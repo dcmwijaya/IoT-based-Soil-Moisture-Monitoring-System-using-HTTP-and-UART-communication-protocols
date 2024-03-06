@@ -41,7 +41,7 @@ void sendData(){
 void wifiResponse(){
   if(espSerial.available()){ // if serial communication is connected then do :
     response = ""; // this String data type is used to store data obtained from serial communication
-    while(espSerial.available()){ // this loop is used to read the serial communication data from the Arduino Uno
+    while(espSerial.available()){ // this loop is used to read the serial communication data from the ESP-01S
       response += espSerial.readString(); // adds each sensor data reading into a data string named response
       StringReady= true; // StringReady is true
     }
