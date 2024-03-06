@@ -31,8 +31,8 @@ void loop(){
 
 // Method: sensorReadout
 void sensorReadout(){
-//  sensorValue = analogRead(sensorPin); // read the analog input
-  sensorValue = random(1000); // read the dummy data
+  sensorValue = analogRead(sensorPin); // read the analog input
+//  sensorValue = random(1000); // read the dummy data
 }
 
 // Method: sendData
