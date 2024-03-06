@@ -2,38 +2,53 @@
 #include <SoftwareSerial.h> // calls a library called SoftwareSerial
 
 // object initialization
-SoftwareSerial espSerial(2, 3); // 2 As RX pin, 3 As TX pin -> Arduino Uno to ESP-01
+SoftwareSerial espSerial(6, 7); // 6 As RX pin, 7 As TX pin -> Arduino Uno to ESP-01S
 
 // variable initialization
-String ssid = "YOUR_WIFI_NAME"; // ssid name
-String password = "YOUR_WIFI_PASSWORD"; // ssid password
-String data; // data with String type
-boolean StringReady = false;
+const int sensorPin = A0; // define analog input using pin: A0
+const String ssid = "YOUR_WIFI_NAME"; // define ssid name
+const String password = "YOUR_WIFI_PASSWORD"; // define ssid password
+int sensorValue; // data with integer type to store the soil moisture sensor value
+String response; // data with string type to receive response from ESP-01S
+boolean StringReady = false; // // data with boolean type is initially set to false
 
 // Method: setup
 void setup(){  
   Serial.begin(9600); // start serial communication inside the Arduino Uno
-  espSerial.begin(9600); // start serial communication to ESP-01  
+  espSerial.begin(9600); // start serial communication to ESP-01S  
 }
 
 // Method: loop
 void loop(){
-  espSerial.print(ssid+","+password); // send data from Arduino Uno to ESP-01 with UART communication
-  delay(5000); // time delay in loop   
+  sensorReadout(); // calling the sensorReadout method
+  sendData(); // calling the sendData method
   wifiResponse(); // calling the wifiResponse method
 }
 
-// Method: dataRetrieval
+// Method: sensorReadout
+void sensorReadout(){
+//  sensorValue = analogRead(sensorPin); // read the analog input
+  sensorValue = random(1000); // read the dummy data
+}
+
+// Method: sendData
+void sendData(){
+  espSerial.print(ssid+","+password+","+sensorValue); // send data from Arduino Uno to ESP-01S with UART communication
+  Serial.println("Send data: "+ssid+","+password+","+sensorValue); // print to serial monitor
+  delay(5000); // time delay in loop
+}
+
+// Method: wifiResponse
 void wifiResponse(){
   if(espSerial.available()){ // if serial communication is connected then do :
-    data = ""; // this String data type is used to store data obtained from serial communication
+    response = ""; // this String data type is used to store data obtained from serial communication
     while(espSerial.available()){ // this loop is used to read the serial communication data from the Arduino Uno
-      data += espSerial.readString(); // adds each sensor data reading into a data string named data
-      StringReady= true;
+      response += espSerial.readString(); // adds each sensor data reading into a data string named data
+      StringReady= true; // StringReady is true
     }
-    if (StringReady){
-      data.trim(); // remove existing spaces
-      Serial.println("Response: " + data);
+    if(StringReady){ // if the string is ready then :
+      response.trim(); // remove existing spaces
+      Serial.println("Response: " + response); // print to serial monitor
     }
     delay(1000); // time delay in loop
   }
