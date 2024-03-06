@@ -20,7 +20,7 @@ void loop() {
 void WiFiconnection(String ssid, String password){
   WiFi.begin(ssid, password); // starting wifi   
   if(WiFi.status() == WL_CONNECTED){ // if successfully connect to the WiFi then :
-    Serial.println("\nWiFi Connected !!"); // send response to Arduino Uno
+    Serial.println("WiFi Connected !!"); // send response to Arduino Uno
   }
   if(WiFi.status() != WL_CONNECTED){ // if not successfully connect to the WiFi then : 
     while(WiFi.status() != WL_CONNECTED){ // while not successfully connect to the WiFi then :
