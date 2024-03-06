@@ -4,6 +4,9 @@
 // variable initialization
 String data; // data with string type to receive response from Arduino Uno
 boolean StringReady = false; // data with boolean type is initially set to false
+#define wetSoil "277" // maximum value considered as 'wet' soil
+#define drySoil "380" // minimum value considered as 'dry' soil
+String status; // data with String type is used for moisture sensor purposes
 
 // Method: setup
 void setup() {
@@ -42,8 +45,13 @@ void dataRetrieval(){
       data.trim(); // remove existing spaces
       String ssid = getValue(data, ',', 0); // this variable is used to store ssid data
       String password = getValue(data, ',', 1); // this variable is used to store password data
-      String sensorValue = getValue(data, ',', 2); // this variable is used to store sensor data
+      String device = getValue(data, ',', 2); // this variable is used to store ubidots device data
+      String topic = getValue(data, ',', 3); // this variable is used to store ubidots topic data
+      String id = getValue(data, ',', 4); // this variable is used to store ubidots id data
+      String token = getValue(data, ',', 5); // this variable is used to store ubidots token data
+      String sensorValue = getValue(data, ',', 6); // this variable is used to store sensor data
       WiFiconnection(ssid, password); // input ssid and password data into the WiFiconnection method
+      soilCondition(sensorValue); // input sensorValue data into the soilCondition method
     }
     delay(1000); // time delay in loop
   }
@@ -67,4 +75,16 @@ String getValue(String data, char separator, int index){ // there are 3 paramete
   // 1. checks whether the value found is greater than the index. if this condition is true, then the function will return the substring data starting from strIndex[0] to strIndex[1]
   // 2. if the condition is false (meaning the found value is not greater than the index), then the function will return an empty string meaning no value was found at the requested index
   return found>index ? data.substring(strIndex[0], strIndex[1]) : "";
+}
+
+// Method: soilCondition
+void soilCondition(String sensorValue){
+  // determine status of soil
+  if (sensorValue < wetSoil) { // if the sensor value is less than 277 then :
+    status = "wet"; // wet soil conditions
+  } else if (sensorValue >= wetSoil && sensorValue < drySoil) { // if the sensor value is within the range of 277 - 380 then :
+    status = "moist"; // moist soil conditions
+  } else { // if the sensor value is not in wet and moist conditions then :
+    status = "dry"; // dry soil conditions
+  }
 }
