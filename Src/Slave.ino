@@ -20,6 +20,9 @@ boolean StringReady = false; // data with boolean type is initially set to false
 void setup(){  
   Serial.begin(9600); // start serial communication inside the Arduino Uno
   espSerial.begin(9600); // start serial communication to ESP-01S  
+  while(!espSerial){ // if serial communication is not connected then do :
+    ; // wait for serial port to connect
+  }
 }
 
 // Method: loop
