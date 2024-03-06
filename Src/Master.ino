@@ -2,9 +2,10 @@
 #include <ESP8266WiFi.h> // calls a library called ESP8266WiFi
 
 // variable initialization
-String data;
-boolean StringReady = false;
+String data; // data with string type to receive response from Arduino Uno
+boolean StringReady = false; // data with boolean type is initially set to false
 
+// Method: setup
 void setup() {
   Serial.begin(9600); // start serial communication
   while(!Serial){ // if serial communication is not connected then do :
@@ -12,6 +13,7 @@ void setup() {
   }
 }
 
+// Method: loop
 void loop() { 
   dataRetrieval(); // calling the dataRetrieval method
 }
@@ -34,16 +36,16 @@ void dataRetrieval(){
   if(Serial.available()){ // if serial communication is connected then do :
     while(Serial.available()){ // this loop is used to read the serial communication data from the Arduino Uno
       data += Serial.readString(); // adds each sensor data reading into a data string named data
-      StringReady= true;
+      StringReady= true; // StringReady is true
     }
     if (StringReady){
       data.trim(); // remove existing spaces
       String ssid = getValue(data, ',', 0); // this variable is used to store ssid data
       String password = getValue(data, ',', 1); // this variable is used to store password data
       String sensorValue = getValue(data, ',', 2); // this variable is used to store sensor data
-      WiFiconnection(ssid, password);
+      WiFiconnection(ssid, password); // input ssid and password data into the WiFiconnection method
     }
-    delay(1000);
+    delay(1000); // time delay in loop
   }
 }
 
