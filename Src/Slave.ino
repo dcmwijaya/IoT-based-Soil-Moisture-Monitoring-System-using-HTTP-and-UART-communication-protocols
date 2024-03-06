@@ -14,7 +14,6 @@ boolean StringReady = false;
 void setup(){  
   Serial.begin(9600); // start serial communication inside the Arduino Uno
   espSerial.begin(9600); // start serial communication to ESP-01  
-  wifiResponse(); // calling the wifiResponse method
 }
 
 // Method: loop
