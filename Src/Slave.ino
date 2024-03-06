@@ -49,7 +49,7 @@ void wifiResponse(){
       response.trim(); // remove existing spaces
       Serial.println("WiFi status: " + response); // print to serial monitor
       if(response == "Connected"){ // if the response is equal to "Connected" then :
-        Serial.println("Send data: "+ssid+","+password+","+sensorValue+"\n"); // print to serial monitor
+        Serial.println("Send sensor data: "+String(sensorValue)+"\n"); // print to serial monitor
       }
     }
     delay(1000); // time delay in loop
