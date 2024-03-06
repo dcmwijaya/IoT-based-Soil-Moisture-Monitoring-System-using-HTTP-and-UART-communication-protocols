@@ -22,7 +22,7 @@ void WiFiconnection(String ssid, String password){
   if(WiFi.status() == WL_CONNECTED){ // if successfully connect to the WiFi then :
     Serial.println("\nWiFi Connected !!"); // send response to Arduino Uno
   }
-  else{ // if not successfully connect to the WiFi then : 
+  if(WiFi.status() != WL_CONNECTED){ // if not successfully connect to the WiFi then : 
     while(WiFi.status() != WL_CONNECTED){ // while not successfully connect to the WiFi then :
       delay(500); // time delay in loop
       Serial.print("."); // send response to Arduino Uno
