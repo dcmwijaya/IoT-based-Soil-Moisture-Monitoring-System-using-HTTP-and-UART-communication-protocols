@@ -5,8 +5,8 @@
 SoftwareSerial espSerial(2, 3); // 2 As RX pin, 3 As TX pin -> Arduino Uno to ESP-01
 
 // variable initialization
-String ssid = "WIJAYA"; // defines your ssid name
-String password = "IsW4ri71!!"; // defines your ssid name
+String ssid = "YOUR_WIFI_NAME"; // ssid name
+String password = "YOUR_WIFI_PASSWORD"; // ssid password
 String data; // data with String type
 boolean StringReady = false;
 
@@ -21,6 +21,7 @@ void setup(){
 void loop(){
   espSerial.print(ssid+","+password); // send data from Arduino Uno to ESP-01 with UART communication
   delay(5000); // time delay in loop   
+  wifiResponse(); // calling the wifiResponse method
 }
 
 // Method: dataRetrieval
