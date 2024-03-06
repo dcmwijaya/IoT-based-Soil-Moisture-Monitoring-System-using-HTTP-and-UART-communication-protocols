@@ -34,7 +34,6 @@ void sensorReadout(){
 // Method: sendData
 void sendData(){
   espSerial.print(ssid+","+password+","+sensorValue); // send data from Arduino Uno to ESP-01S with UART communication
-  Serial.println("Send data: "+ssid+","+password+","+sensorValue); // print to serial monitor
   delay(5000); // time delay in loop
 }
 
@@ -43,12 +42,15 @@ void wifiResponse(){
   if(espSerial.available()){ // if serial communication is connected then do :
     response = ""; // this String data type is used to store data obtained from serial communication
     while(espSerial.available()){ // this loop is used to read the serial communication data from the Arduino Uno
-      response += espSerial.readString(); // adds each sensor data reading into a data string named data
+      response += espSerial.readString(); // adds each sensor data reading into a data string named response
       StringReady= true; // StringReady is true
     }
     if(StringReady){ // if the string is ready then :
       response.trim(); // remove existing spaces
-      Serial.println("Response: " + response); // print to serial monitor
+      Serial.println("WiFi status: " + response); // print to serial monitor
+      if(response == "Connected"){ // if the response is equal to "Connected" then :
+        Serial.println("Send data: "+ssid+","+password+","+sensorValue+"\n"); // print to serial monitor
+      }
     }
     delay(1000); // time delay in loop
   }
