@@ -8,6 +8,10 @@ SoftwareSerial espSerial(6, 7); // 6 As RX pin, 7 As TX pin -> Arduino Uno to ES
 const int sensorPin = A0; // define analog input using pin: A0
 const String ssid = "YOUR_WIFI_NAME"; // define ssid name
 const String password = "YOUR_WIFI_PASSWORD"; // define ssid password
+const String device = "YOUR_UBIDOTS_DEVICE"; // define ubidots device
+const String topic = "YOUR_UBIDOTS_TOPIC"; // define ubidots topic
+const String id = "YOUR_UBIDOTS_ID"; // define ubidots id
+const String token = "YOUR_UBIDOTS_TOKEN"; // define ubidots token
 int sensorValue; // data with integer type to store the soil moisture sensor value
 String response; // data with string type to receive response from ESP-01S
 boolean StringReady = false; // data with boolean type is initially set to false
@@ -27,13 +31,13 @@ void loop(){
 
 // Method: sensorReadout
 void sensorReadout(){
-  sensorValue = analogRead(sensorPin); // read the analog input
-//  sensorValue = random(1000); // read the dummy data
+//  sensorValue = analogRead(sensorPin); // read the analog input
+  sensorValue = random(1000); // read the dummy data
 }
 
 // Method: sendData
 void sendData(){
-  espSerial.print(ssid+","+password+","+sensorValue); // send data from Arduino Uno to ESP-01S with UART communication
+  espSerial.print(ssid+","+password+","+device+","+topic+","+id+","+token+","+sensorValue); // send data from Arduino Uno to ESP-01S with UART communication
   delay(5000); // time delay in loop
 }
 
