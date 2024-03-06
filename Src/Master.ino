@@ -6,7 +6,7 @@ String data;
 boolean StringReady = false;
 
 void setup() {
-  Serial.begin(9600); // start serial communication inside the ESP-01
+  Serial.begin(9600); // start serial communication
   while(!Serial){ // if serial communication is not connected then do :
     ; // wait for serial port to connect
   }
@@ -20,14 +20,12 @@ void loop() {
 void WiFiconnection(String ssid, String password){
   WiFi.begin(ssid, password); // starting wifi   
   if(WiFi.status() == WL_CONNECTED){ // if successfully connect to the WiFi then :
-    Serial.println("WiFi Connected !!"); // send response to Arduino Uno
+    Serial.println("Connected"); // send response to Arduino Uno
   }
-  if(WiFi.status() != WL_CONNECTED){ // if not successfully connect to the WiFi then : 
-    while(WiFi.status() != WL_CONNECTED){ // while not successfully connect to the WiFi then :
-      delay(500); // time delay in loop
-      Serial.print("."); // send response to Arduino Uno
-    }  
-  } 
+  while(WiFi.status() != WL_CONNECTED){ // while not successfully connect to the WiFi then :
+    delay(500); // time delay in loop
+    Serial.print("."); // send response to Arduino Uno
+  }  
 }
 
 // Method: dataRetrieval
@@ -42,6 +40,7 @@ void dataRetrieval(){
       data.trim(); // remove existing spaces
       String ssid = getValue(data, ',', 0); // this variable is used to store ssid data
       String password = getValue(data, ',', 1); // this variable is used to store password data
+      String sensorValue = getValue(data, ',', 2); // this variable is used to store sensor data
       WiFiconnection(ssid, password);
     }
     delay(1000);
