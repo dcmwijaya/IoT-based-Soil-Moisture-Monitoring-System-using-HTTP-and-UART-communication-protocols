@@ -41,7 +41,7 @@ void dataRetrieval(){
       data += Serial.readString(); // adds each sensor data reading into a data string named data
       StringReady= true; // StringReady is true
     }
-    if (StringReady){
+    if (StringReady){ // if the string is ready then :
       data.trim(); // remove existing spaces
       String ssid = getValue(data, ',', 0); // this variable is used to store ssid data
       String password = getValue(data, ',', 1); // this variable is used to store password data
