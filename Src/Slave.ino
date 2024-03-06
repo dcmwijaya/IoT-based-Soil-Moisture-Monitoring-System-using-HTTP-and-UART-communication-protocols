@@ -10,7 +10,7 @@ const String ssid = "YOUR_WIFI_NAME"; // define ssid name
 const String password = "YOUR_WIFI_PASSWORD"; // define ssid password
 int sensorValue; // data with integer type to store the soil moisture sensor value
 String response; // data with string type to receive response from ESP-01S
-boolean StringReady = false; // // data with boolean type is initially set to false
+boolean StringReady = false; // data with boolean type is initially set to false
 
 // Method: setup
 void setup(){  
