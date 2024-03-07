@@ -109,7 +109,7 @@ void manageData(String ssid, String password, String server, int port, String de
     Serial.println("\nServer status: connecting to "+server+"..."); // send response to Arduino Uno
     
     if(!client.connect(server, port)){ // if client is not connected then do :
-      Serial.println("Server status: not connected...\n");  // send response to Arduino Uno 
+      Serial.println("Server status: not connected...");  // send response to Arduino Uno 
     }
     
     else if (client.connect(server, port)) { // if client is connected then do :
