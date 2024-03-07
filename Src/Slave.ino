@@ -19,7 +19,7 @@ String response; // this variable is used to receive response from ESP-01S
 String Msg; // this variable is used to store all String data that will be sent
 boolean StringReady = false; // this variable is initially set to false
 unsigned long previousMillis = 0; // this variable will store last time sensor was updated
-const long interval = 5000; // this variable as the interval to send data to ESP-01S (milliseconds)
+const long interval = 10000; // this variable as the interval to send data to ESP-01S (milliseconds)
 
 // Method: setup
 void setup(){  
