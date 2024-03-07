@@ -115,11 +115,11 @@ void manageData(String ssid, String password, String server, int port, String de
     else if (client.connect(server, port)) { // if client is connected then do :
       Serial.println("Server status: connected...\n"); // send response to Arduino Uno 
       
-      client.print("POST /api/v1.6/devices/" + device + " HTTP/1.1\r\n");
+      client.print("POST /api/v1.6/devices/"+device+" HTTP/1.1\r\n");
       client.print("X-Auth-Token: ");
       client.println(token);
       client.print("Content-Type: application/json\r\n");
-      client.print("Host: industrial.api.ubidots.com\r\n");
+      client.print("Host: "+server+"\r\n");
       
       String buff = "";
       buff += "{";
