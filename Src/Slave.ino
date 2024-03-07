@@ -8,13 +8,18 @@ SoftwareSerial espSerial(6, 7); // 6 As RX pin, 7 As TX pin -> Arduino Uno to ES
 const int sensorPin = A0; // define analog input using pin: A0
 const String ssid = "YOUR_WIFI_NAME"; // define ssid name
 const String password = "YOUR_WIFI_PASSWORD"; // define ssid password
+const String server = "industrial.api.ubidots.com"; // define server
+const int port = 80; // define ubidots port
 const String device = "YOUR_UBIDOTS_DEVICE"; // define ubidots device
-const String topic = "YOUR_UBIDOTS_TOPIC"; // define ubidots topic
-const String id = "YOUR_UBIDOTS_ID"; // define ubidots id
 const String token = "YOUR_UBIDOTS_TOKEN"; // define ubidots token
-int sensorValue; // data with integer type to store the soil moisture sensor value
-String response; // data with string type to receive response from ESP-01S
-boolean StringReady = false; // data with boolean type is initially set to false
+const String topic1 = "YOUR_UBIDOTS_TOPIC1"; // define ubidots topic 1
+const String topic2 = "YOUR_UBIDOTS_TOPIC2"; // define ubidots topic 2
+int sensorValue; // this variable is used to store the soil moisture sensor value
+String response; // this variable is used to receive response from ESP-01S
+String Msg; // this variable is used to store all String data that will be sent
+boolean StringReady = false; // this variable is initially set to false
+unsigned long previousMillis = 0; // this variable will store last time sensor was updated
+const long interval = 5000; // this variable as the interval to send data to ESP-01S (milliseconds)
 
 // Method: setup
 void setup(){  
@@ -34,14 +39,27 @@ void loop(){
 
 // Method: sensorReadout
 void sensorReadout(){
-  sensorValue = analogRead(sensorPin); // read the analog input
-//  sensorValue = random(1000); // read the dummy data
+//  sensorValue = analogRead(sensorPin); // read the analog input
+  sensorValue = random(1000); // read the dummy data
 }
 
 // Method: sendData
 void sendData(){
-  espSerial.print(ssid+","+password+","+device+","+topic+","+id+","+token+","+sensorValue); // send data from Arduino Uno to ESP-01S with UART communication
-  delay(5000); // time delay in loop
+  unsigned long currentMillis = millis(); // this variable is used to save the current time
+
+  if (currentMillis - previousMillis >= interval) { // if the current time minus the previous time is greater than equal to the interval then :
+    previousMillis = currentMillis; // previous time is the same as the current time
+    Msg = ssid+','; // first data sent
+    Msg += password+','; // second data sent
+    Msg += server+','; // third data sent
+    Msg += port+','; // fourth data sent
+    Msg += device+','; // fifth data sent
+    Msg += token+','; // sixth data sent
+    Msg += topic1+','; // seventh data sent
+    Msg += topic2+','; // eighth data sent
+    Msg += sensorValue; // ninth data sent
+    espSerial.print(Msg); // send data from Arduino Uno to ESP-01S with UART communication
+  }
 }
 
 // Method: wifiResponse
@@ -53,11 +71,7 @@ void wifiResponse(){
       StringReady= true; // StringReady is true
     }
     if(StringReady){ // if the string is ready then :
-      response.trim(); // remove existing spaces
-      Serial.println("WiFi status: " + response); // print to serial monitor
-      if(response == "Connected"){ // if the response is equal to "Connected" then :
-        Serial.println("Send sensor data: "+String(sensorValue)+"\n"); // print to serial monitor
-      }
+      Serial.print(response); // print to serial monitor
     }
     delay(1000); // time delay in loop
   }
