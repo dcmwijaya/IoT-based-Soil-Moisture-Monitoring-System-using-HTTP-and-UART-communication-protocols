@@ -32,10 +32,10 @@ void WiFiconnection(String ssid, String password){
   WiFi.begin(ssid, password); // starting wifi   
   Serial.println("WiFi status: connecting to "+ssid+"..."); // send response to Arduino Uno
   if(WiFi.status() == WL_CONNECTED){ // if successfully connect to the WiFi then :
-    Serial.println("WiFi status: connected..."); // send response to Arduino Uno
+    Serial.println("\n\nWiFi status: connected..."); // send response to Arduino Uno
   }
   if(WiFi.status() != WL_CONNECTED){ // if not successfully connect to the WiFi then :
-    Serial.print("WiFi status: not connected..."); // send response to Arduino Uno
+    Serial.println("WiFi status: not connected..."); // send response to Arduino Uno
   }
 }
 
