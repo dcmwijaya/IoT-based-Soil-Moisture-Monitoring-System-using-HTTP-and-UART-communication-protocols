@@ -1,15 +1,18 @@
 // library initialization
 #include <ESP8266WiFi.h> // calls a library called ESP8266WiFi
-#include <ESP8266HTTPClient.h>
+#include <ESP8266HTTPClient.h> // calls a library called ESP8266HTTPClient
 
-WiFiClient client;
+// object initialization
+WiFiClient client; // names the object of WiFiClient with the name -> client
 
 // variable initialization
-String data; // data with string type to receive response from Arduino Uno
-boolean StringReady = false; // data with boolean type is initially set to false
-#define wetSoil 277 // maximum value considered as 'wet' soil
-#define drySoil 380 // minimum value considered as 'dry' soil
-String status; // data with String type is used for moisture sensor purposes
+#define wetSoil 277 // define the maximum value that is considered as 'wet' soil
+#define drySoil 380 // define the minimum value that is considered as 'dry' soil
+String data; // this variable is used to receive response from Arduino Uno
+boolean StringReady = false; // this variable is initially set to false
+String status; // this variable is used to accommodate soil status
+unsigned long previousMillis = 0; // this variable will store last time sensor was updated
+const long interval = 10000; // this variable as the interval to send data to IoT Platform (milliseconds)
 
 // Method: setup
 void setup() {
@@ -28,12 +31,17 @@ void loop() {
 void WiFiconnection(String ssid, String password){
   WiFi.begin(ssid, password); // starting wifi   
   if(WiFi.status() == WL_CONNECTED){ // if successfully connect to the WiFi then :
-    Serial.println("Connected"); // send response to Arduino Uno
+    Serial.println("WiFi status: Connected..."); // send response to Arduino Uno
   }
-  while(WiFi.status() != WL_CONNECTED){ // while not successfully connect to the WiFi then :
-    delay(500); // time delay in loop
-    Serial.print("."); // send response to Arduino Uno
-  }  
+  if(WiFi.status() != WL_CONNECTED){ // if not successfully connect to the WiFi then :
+    Serial.print("WiFi status: "); // send response to Arduino Uno
+    while(WiFi.status() != WL_CONNECTED){ // while not successfully connect to the WiFi then :
+      delay(500); // time delay in loop
+      Serial.print("."); // send response to Arduino Uno
+    }  
+    Serial.println(); // send response to Arduino Uno
+    return; // return value
+  }
 }
 
 // Method: dataRetrieval
@@ -52,12 +60,12 @@ void dataRetrieval(){
       String server = getValue(data, ',', 3); // this variable is used to store ubidots server data
       String port = getValue(data, ',', 4); // this variable is used to store ubidots port data
       String token = getValue(data, ',', 5); // this variable is used to store ubidots token data
-      String topic = getValue(data, ',', 6); // this variable is used to store ubidots topic data
-      String sensorValue = getValue(data, ',', 7); // this variable is used to store sensor data
+      String topic1 = getValue(data, ',', 6); // this variable is used to store ubidots topic 1 data
+      String topic2 = getValue(data, ',', 7); // this variable is used to store ubidots topic 2 data
+      String sensorValue = getValue(data, ',', 8); // this variable is used to store sensor data
       WiFiconnection(ssid, password); // input ssid and password data into the WiFiconnection method
       soilCondition(sensorValue.toInt()); // input sensorValue data into the soilCondition method
-      Serial.println(sensorValue.toInt()); // testing
-      sendData(server, port.toInt(), device, token, topic, sensorValue.toInt()); // input server, port, device, token, topic, sensorValue data into the sendData method
+      sendData(server, port.toInt(), device, token, topic1, topic2, sensorValue.toInt()); // input server, port, device, token, topic1, topic2, sensorValue data into the sendData method
     }
     delay(1000); // time delay in loop
   }
@@ -95,35 +103,48 @@ void soilCondition(int sensorValue){
   }
 }
 
-void sendData(String server, int port, String device, String token, String topic, int sensorValue){
-  Serial.println("Sending...");
-  if (!client.connect(server, port)) {
-    Serial.println("No connection server");
-    while (!client.connect(server, port)) {
-      Serial.println("Waiting for server...");
-      delay(1000);
+// Method: sendData
+void sendData(String server, int port, String device, String token, String topic1, String topic2, int sensorValue){
+  Serial.println("Server status: Connecting to IoT Platform..."); // send response to Arduino Uno
+  if(!client.connect(server, port)){ // if client is not connected then do :
+    Serial.println("Server status: ");  // send response to Arduino Uno 
+    while(!client.connect(server, port)){ // while client is not connected then do :
+      delay(500); // time delay in loop
+      Serial.print("."); // send response to Arduino Uno 
     }
-    return;
+    return; // return value
   }
-  else if (client.connect(server, port)) { //if connected
-    client.print("POST /api/v1.6/devices/" + device + " HTTP/1.1\r\n");
-    client.print("X-Auth-Token: ");
-    client.println(token);
-    client.print("Content-Type: application/json\r\n");
-    client.print("Host: industrial.api.ubidots.com\r\n");
-    String buff = "";
-    buff += "{";
-    buff += "\""+topic+"\":"+sensorValue+"";
-    buff += "}\r\n";
-    int dataLength = buff.length() - 1;
-    String dataLengthStr = String(dataLength);
-    client.print("Content-Length: ");
-    client.println(dataLengthStr);
-    client.println();
-    client.println(buff);
-    while (!client.available());
-    while (client.available()) {
-      char c = client.read();
+  else if (client.connect(server, port)) { // if client is connected then do :
+    Serial.println("Server status: Connected..."); // send response to Arduino Uno 
+    unsigned long currentMillis = millis(); // to save the current time
+
+    if (currentMillis - previousMillis >= interval) { // if the current time minus the previous time is greater than equal to the interval then :
+      previousMillis = currentMillis; // previous time is the same as the current time
+    
+      client.print("POST /api/v1.6/devices/" + device + " HTTP/1.1\r\n");
+      client.print("X-Auth-Token: ");
+      client.println(token);
+      client.print("Content-Type: application/json\r\n");
+      client.print("Host: industrial.api.ubidots.com\r\n");
+      
+      String buff = "";
+      buff += "{";
+      buff += "\""+topic1+"\":"+sensorValue+", ";
+      buff += "\""+topic2+"\":"+status+"";
+      buff += "}\r\n";
+      
+      int dataLength = buff.length()-1;
+      String dataLengthStr = String(dataLength);
+      client.print("Content-Length: ");
+      client.println(dataLengthStr);
+      client.println();
+      client.println(buff); 
+    }
+    while(!client.available()){ // if client is not connected then do :
+      ; // wait for client to connect
+    }
+    while(client.available()){ // if client is connected then do :
+      char c = client.read(); // this variable is used to read the data sent to the IoT Platform
       Serial.write(c);  // open this to check delivery status
     }
     client.stop();
