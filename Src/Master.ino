@@ -1,12 +1,16 @@
 // library initialization
 #include <ESP8266WiFi.h> // calls a library called ESP8266WiFi
+#include <ESP8266HTTPClient.h>
+
+WiFiClient client;
 
 // variable initialization
 String data; // data with string type to receive response from Arduino Uno
 boolean StringReady = false; // data with boolean type is initially set to false
-#define wetSoil "277" // maximum value considered as 'wet' soil
-#define drySoil "380" // minimum value considered as 'dry' soil
+#define wetSoil 277 // maximum value considered as 'wet' soil
+#define drySoil 380 // minimum value considered as 'dry' soil
 String status; // data with String type is used for moisture sensor purposes
+long lastMsg = 0;
 
 // Method: setup
 void setup() {
@@ -46,12 +50,15 @@ void dataRetrieval(){
       String ssid = getValue(data, ',', 0); // this variable is used to store ssid data
       String password = getValue(data, ',', 1); // this variable is used to store password data
       String device = getValue(data, ',', 2); // this variable is used to store ubidots device data
-      String topic = getValue(data, ',', 3); // this variable is used to store ubidots topic data
-      String id = getValue(data, ',', 4); // this variable is used to store ubidots id data
+      String server = getValue(data, ',', 3); // this variable is used to store ubidots server data
+      String port = getValue(data, ',', 4); // this variable is used to store ubidots port data
       String token = getValue(data, ',', 5); // this variable is used to store ubidots token data
-      String sensorValue = getValue(data, ',', 6); // this variable is used to store sensor data
+      String topic = getValue(data, ',', 6); // this variable is used to store ubidots topic data
+      String sensorValue = getValue(data, ',', 7); // this variable is used to store sensor data
       WiFiconnection(ssid, password); // input ssid and password data into the WiFiconnection method
-      soilCondition(sensorValue); // input sensorValue data into the soilCondition method
+      soilCondition(sensorValue.toInt()); // input sensorValue data into the soilCondition method
+      Serial.println(sensorValue.toInt()); // testing
+      sendData(server, port.toInt(), device, token, topic, sensorValue.toInt()); // input server, port, device, token, topic, sensorValue data into the sendData method
     }
     delay(1000); // time delay in loop
   }
@@ -78,7 +85,7 @@ String getValue(String data, char separator, int index){ // there are 3 paramete
 }
 
 // Method: soilCondition
-void soilCondition(String sensorValue){
+void soilCondition(int sensorValue){
   // determine status of soil
   if (sensorValue < wetSoil) { // if the sensor value is less than 277 then :
     status = "wet"; // wet soil conditions
@@ -86,5 +93,40 @@ void soilCondition(String sensorValue){
     status = "moist"; // moist soil conditions
   } else { // if the sensor value is not in wet and moist conditions then :
     status = "dry"; // dry soil conditions
+  }
+}
+
+void sendData(String server, int port, String device, String token, String topic, int sensorValue){
+  Serial.println("Sending...");
+  if (!client.connect(server, port)) {
+    Serial.println("No connection server");
+    while (!client.connect(server, port)) {
+      Serial.println("Waiting for server...");
+      delay(1000);
+    }
+    return;
+  }
+  else if (client.connect(server, port)) { //if connected
+    client.print("POST /api/v1.6/devices/" + device + " HTTP/1.1\r\n");
+    client.print("X-Auth-Token: ");
+    client.println(token);
+    client.print("Content-Type: application/json\r\n");
+    client.print("Host: industrial.api.ubidots.com\r\n");
+    String buff = "";
+    buff += "{";
+    buff += "\""+topic+"\":"+sensorValue+"";
+    buff += "}\r\n";
+    int dataLength = buff.length() - 1;
+    String dataLengthStr = String(dataLength);
+    client.print("Content-Length: ");
+    client.println(dataLengthStr);
+    client.println();
+    client.println(buff);
+    while (!client.available());
+    while (client.available()) {
+      char c = client.read();
+      Serial.write(c);  // open this to check delivery status
+    }
+    client.stop();
   }
 }
