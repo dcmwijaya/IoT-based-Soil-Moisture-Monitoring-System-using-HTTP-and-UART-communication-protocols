@@ -24,7 +24,7 @@ void setup() {
 
 // Method: loop
 void loop() { 
-  dataRetrieval(); // calling the dataRetrieval method
+  RetrievalTransmission(); // calling the RetrievalTransmission method
 }
 
 // Method: WiFiconnection
@@ -35,7 +35,7 @@ void WiFiconnection(String ssid, String password){
     Serial.println("WiFi status: connected..."); // send response to Arduino Uno
   }
   if(WiFi.status() != WL_CONNECTED){ // if not successfully connect to the WiFi then :
-    Serial.print("WiFi status: "); // send response to Arduino Uno
+    Serial.print("WiFi status: not connected..."); // send response to Arduino Uno
     while(WiFi.status() != WL_CONNECTED){ // while not successfully connect to the WiFi then :
       delay(500); // time delay in loop
       Serial.print("."); // send response to Arduino Uno
@@ -45,8 +45,8 @@ void WiFiconnection(String ssid, String password){
   }
 }
 
-// Method: dataRetrieval
-void dataRetrieval(){
+// Method: RetrievalTransmission
+void RetrievalTransmission(){
   data = ""; // this String data type is used to store data obtained from serial communication
   if(Serial.available()){ // if serial communication is connected then do :
     while(Serial.available()){ // this loop is used to read the serial communication data from the Arduino Uno
@@ -64,9 +64,7 @@ void dataRetrieval(){
       String topic1 = getValue(data, ',', 6); // this variable is used to store ubidots topic 1 data
       String topic2 = getValue(data, ',', 7); // this variable is used to store ubidots topic 2 data
       String sensorValue = getValue(data, ',', 8); // this variable is used to store sensor data
-      WiFiconnection(ssid, password); // input ssid and password data into the WiFiconnection method
-      soilCondition(sensorValue.toInt()); // input sensorValue data into the soilCondition method
-      sendData(server, port.toInt(), device, token, topic1, topic2, sensorValue.toInt()); // input server, port, device, token, topic1, topic2, sensorValue data into the sendData method
+      manageData(ssid, password, server, port.toInt(), device, token, topic1, topic2, sensorValue.toInt()); // input ssid, password, server, port, device, token, topic1, topic2, sensorValue data into the sendData method
     }
     delay(1000); // time delay in loop
   }
@@ -104,19 +102,25 @@ void soilCondition(int sensorValue){
   }
 }
 
-// Method: sendData
-void sendData(String server, int port, String device, String token, String topic1, String topic2, int sensorValue){
-  Serial.println("Server status: connecting to "+server+"..."); // send response to Arduino Uno
-  if(!client.connect(server, port)){ // if client is not connected then do :
-    Serial.println("Server status: not connected...");  // send response to Arduino Uno 
-  }
-  else if (client.connect(server, port)) { // if client is connected then do :
-    Serial.println("Server status: connected..."); // send response to Arduino Uno 
-    unsigned long currentMillis = millis(); // to save the current time
+// Method: manageData
+void manageData(String ssid, String password, String server, int port, String device, String token, String topic1, String topic2, int sensorValue){
+  unsigned long currentMillis = millis(); // to save the current time
 
-    if (currentMillis - previousMillis >= interval) { // if the current time minus the previous time is greater than equal to the interval then :
-      previousMillis = currentMillis; // previous time is the same as the current time
+  if (currentMillis - previousMillis >= interval) { // if the current time minus the previous time is greater than equal to the interval then :
+    previousMillis = currentMillis; // previous time is the same as the current time
     
+    WiFiconnection(ssid, password); // input ssid and password data into the WiFiconnection method
+    soilCondition(sensorValue); // input sensorValue data into the soilCondition method
+    
+    Serial.println("Server status: connecting to "+server+"..."); // send response to Arduino Uno
+    
+    if(!client.connect(server, port)){ // if client is not connected then do :
+      Serial.println("Server status: not connected...");  // send response to Arduino Uno 
+    }
+    
+    else if (client.connect(server, port)) { // if client is connected then do :
+      Serial.println("Server status: connected..."); // send response to Arduino Uno 
+      
       client.print("POST /api/v1.6/devices/" + device + " HTTP/1.1\r\n");
       client.print("X-Auth-Token: ");
       client.println(token);
@@ -135,11 +139,12 @@ void sendData(String server, int port, String device, String token, String topic
       client.println(dataLengthStr);
       client.println();
       client.println(buff); 
+        
+      while(client.available()){ // if client is connected then do :
+        char c = client.read(); // this variable is used to read the data sent to the IoT Platform
+        Serial.write(c);  // open this to check delivery status
+      }
+      client.stop();
     }
-    while(client.available()){ // if client is connected then do :
-      char c = client.read(); // this variable is used to read the data sent to the IoT Platform
-      Serial.write(c);  // open this to check delivery status
-    }
-    client.stop();
   }
 }
