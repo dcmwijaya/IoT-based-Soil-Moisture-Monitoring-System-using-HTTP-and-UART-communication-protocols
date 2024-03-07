@@ -8,7 +8,7 @@ SoftwareSerial espSerial(6, 7); // 6 As RX pin, 7 As TX pin -> Arduino Uno to ES
 const int sensorPin = A0; // define analog input using pin: A0
 const String ssid = "YOUR_WIFI_NAME"; // define ssid name
 const String password = "YOUR_WIFI_PASSWORD"; // define ssid password
-const String server = "industrial.api.ubidots.com"; // define server
+const String server = "things.ubidots.com"; // define server
 const int port = 80; // define ubidots port
 const String device = "YOUR_UBIDOTS_DEVICE"; // define ubidots device
 const String token = "YOUR_UBIDOTS_TOKEN"; // define ubidots token
