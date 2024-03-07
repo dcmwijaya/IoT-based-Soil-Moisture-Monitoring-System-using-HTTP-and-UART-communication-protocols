@@ -12,7 +12,7 @@ String data; // this variable is used to receive response from Arduino Uno
 boolean StringReady = false; // this variable is initially set to false
 String status; // this variable is used to accommodate soil status
 unsigned long previousMillis = 0; // this variable will store last time sensor was updated
-const long interval = 10000; // this variable as the interval to send data to IoT Platform (milliseconds)
+const long interval = 1000; // this variable as the interval to send data to IoT Platform (milliseconds)
 
 // Method: setup
 void setup() {
