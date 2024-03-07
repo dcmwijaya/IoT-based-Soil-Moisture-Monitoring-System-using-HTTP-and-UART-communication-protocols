@@ -31,7 +31,7 @@ void loop() {
 void WiFiconnection(String ssid, String password){
   WiFi.begin(ssid, password); // starting wifi   
   if(WiFi.status() == WL_CONNECTED){ // if successfully connect to the WiFi then :
-    Serial.println("WiFi status: Connected..."); // send response to Arduino Uno
+    Serial.println("WiFi status: connected..."); // send response to Arduino Uno
   }
   if(WiFi.status() != WL_CONNECTED){ // if not successfully connect to the WiFi then :
     Serial.print("WiFi status: "); // send response to Arduino Uno
@@ -107,15 +107,10 @@ void soilCondition(int sensorValue){
 void sendData(String server, int port, String device, String token, String topic1, String topic2, int sensorValue){
   Serial.println("Server status: Connecting to IoT Platform..."); // send response to Arduino Uno
   if(!client.connect(server, port)){ // if client is not connected then do :
-    Serial.println("Server status: ");  // send response to Arduino Uno 
-    while(!client.connect(server, port)){ // while client is not connected then do :
-      delay(500); // time delay in loop
-      Serial.print("."); // send response to Arduino Uno 
-    }
-    return; // return value
+    Serial.println("Server status: not connected...");  // send response to Arduino Uno 
   }
   else if (client.connect(server, port)) { // if client is connected then do :
-    Serial.println("Server status: Connected..."); // send response to Arduino Uno 
+    Serial.println("Server status: connected..."); // send response to Arduino Uno 
     unsigned long currentMillis = millis(); // to save the current time
 
     if (currentMillis - previousMillis >= interval) { // if the current time minus the previous time is greater than equal to the interval then :
@@ -139,9 +134,6 @@ void sendData(String server, int port, String device, String token, String topic
       client.println(dataLengthStr);
       client.println();
       client.println(buff); 
-    }
-    while(!client.available()){ // if client is not connected then do :
-      ; // wait for client to connect
     }
     while(client.available()){ // if client is connected then do :
       char c = client.read(); // this variable is used to read the data sent to the IoT Platform
