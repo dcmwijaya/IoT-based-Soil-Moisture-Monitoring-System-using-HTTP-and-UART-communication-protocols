@@ -30,6 +30,7 @@ void loop() {
 // Method: WiFiconnection
 void WiFiconnection(String ssid, String password){
   WiFi.begin(ssid, password); // starting wifi   
+  Serial.println("WiFi status: connecting to "+ssid+"..."); // send response to Arduino Uno
   if(WiFi.status() == WL_CONNECTED){ // if successfully connect to the WiFi then :
     Serial.println("WiFi status: connected..."); // send response to Arduino Uno
   }
@@ -105,7 +106,7 @@ void soilCondition(int sensorValue){
 
 // Method: sendData
 void sendData(String server, int port, String device, String token, String topic1, String topic2, int sensorValue){
-  Serial.println("Server status: connecting to IoT Platform..."); // send response to Arduino Uno
+  Serial.println("Server status: connecting to "+server+"..."); // send response to Arduino Uno
   if(!client.connect(server, port)){ // if client is not connected then do :
     Serial.println("Server status: not connected...");  // send response to Arduino Uno 
   }
