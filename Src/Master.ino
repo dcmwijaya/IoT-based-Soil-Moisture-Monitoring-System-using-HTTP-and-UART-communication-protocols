@@ -36,12 +36,6 @@ void WiFiconnection(String ssid, String password){
   }
   if(WiFi.status() != WL_CONNECTED){ // if not successfully connect to the WiFi then :
     Serial.print("WiFi status: not connected..."); // send response to Arduino Uno
-    while(WiFi.status() != WL_CONNECTED){ // while not successfully connect to the WiFi then :
-      delay(500); // time delay in loop
-      Serial.print("."); // send response to Arduino Uno
-    }  
-    Serial.println(); // send response to Arduino Uno
-    return; // return value
   }
 }
 
