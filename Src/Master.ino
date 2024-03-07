@@ -10,7 +10,6 @@ boolean StringReady = false; // data with boolean type is initially set to false
 #define wetSoil 277 // maximum value considered as 'wet' soil
 #define drySoil 380 // minimum value considered as 'dry' soil
 String status; // data with String type is used for moisture sensor purposes
-long lastMsg = 0;
 
 // Method: setup
 void setup() {
