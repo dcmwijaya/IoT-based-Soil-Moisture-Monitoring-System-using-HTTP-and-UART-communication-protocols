@@ -49,14 +49,14 @@ void sendData(){
 
   if (currentMillis - previousMillis >= interval) { // if the current time minus the previous time is greater than equal to the interval then :
     previousMillis = currentMillis; // previous time is the same as the current time
-    Msg = ssid+','; // first data sent
-    Msg += password+','; // second data sent
-    Msg += server+','; // third data sent
-    Msg += port+','; // fourth data sent
-    Msg += device+','; // fifth data sent
-    Msg += token+','; // sixth data sent
-    Msg += topic1+','; // seventh data sent
-    Msg += topic2+','; // eighth data sent
+    Msg = ssid+","; // first data sent
+    Msg += password+","; // second data sent
+    Msg += server+","; // third data sent
+    Msg += port+","; // fourth data sent
+    Msg += device+","; // fifth data sent
+    Msg += token+","; // sixth data sent
+    Msg += topic1+","; // seventh data sent
+    Msg += topic2+","; // eighth data sent
     Msg += sensorValue; // ninth data sent
     espSerial.print(Msg); // send data from Arduino Uno to ESP-01S with UART communication
   }
