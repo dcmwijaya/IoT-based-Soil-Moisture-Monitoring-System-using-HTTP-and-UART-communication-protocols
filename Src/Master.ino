@@ -105,7 +105,7 @@ void soilCondition(int sensorValue){
 
 // Method: sendData
 void sendData(String server, int port, String device, String token, String topic1, String topic2, int sensorValue){
-  Serial.println("Server status: Connecting to IoT Platform..."); // send response to Arduino Uno
+  Serial.println("Server status: connecting to IoT Platform..."); // send response to Arduino Uno
   if(!client.connect(server, port)){ // if client is not connected then do :
     Serial.println("Server status: not connected...");  // send response to Arduino Uno 
   }
