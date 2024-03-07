@@ -57,9 +57,9 @@ void dataRetrieval(){
       data.trim(); // remove existing spaces
       String ssid = getValue(data, ',', 0); // this variable is used to store ssid data
       String password = getValue(data, ',', 1); // this variable is used to store password data
-      String device = getValue(data, ',', 2); // this variable is used to store ubidots device data
-      String server = getValue(data, ',', 3); // this variable is used to store ubidots server data
-      String port = getValue(data, ',', 4); // this variable is used to store ubidots port data
+      String server = getValue(data, ',', 2); // this variable is used to store ubidots server data
+      String port = getValue(data, ',', 3); // this variable is used to store ubidots port data
+      String device = getValue(data, ',', 4); // this variable is used to store ubidots device data
       String token = getValue(data, ',', 5); // this variable is used to store ubidots token data
       String topic1 = getValue(data, ',', 6); // this variable is used to store ubidots topic 1 data
       String topic2 = getValue(data, ',', 7); // this variable is used to store ubidots topic 2 data
