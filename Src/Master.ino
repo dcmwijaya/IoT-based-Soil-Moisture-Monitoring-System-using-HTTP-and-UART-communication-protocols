@@ -30,9 +30,9 @@ void loop() {
 // Method: WiFiconnection
 void WiFiconnection(String ssid, String password){
   WiFi.begin(ssid, password); // starting wifi   
-  Serial.println("WiFi status: connecting to "+ssid+"..."); // send response to Arduino Uno
+  Serial.println("\nWiFi status: connecting to "+ssid+"..."); // send response to Arduino Uno
   if(WiFi.status() == WL_CONNECTED){ // if successfully connect to the WiFi then :
-    Serial.println("\n\nWiFi status: connected..."); // send response to Arduino Uno
+    Serial.println("WiFi status: connected..."); // send response to Arduino Uno
   }
   if(WiFi.status() != WL_CONNECTED){ // if not successfully connect to the WiFi then :
     Serial.println("WiFi status: not connected..."); // send response to Arduino Uno
@@ -106,14 +106,14 @@ void manageData(String ssid, String password, String server, int port, String de
     WiFiconnection(ssid, password); // input ssid and password data into the WiFiconnection method
     soilCondition(sensorValue); // input sensorValue data into the soilCondition method
     
-    Serial.println("Server status: connecting to "+server+"..."); // send response to Arduino Uno
+    Serial.println("\nServer status: connecting to "+server+"..."); // send response to Arduino Uno
     
     if(!client.connect(server, port)){ // if client is not connected then do :
-      Serial.println("Server status: not connected...");  // send response to Arduino Uno 
+      Serial.println("Server status: not connected...\n");  // send response to Arduino Uno 
     }
     
     else if (client.connect(server, port)) { // if client is connected then do :
-      Serial.println("Server status: connected..."); // send response to Arduino Uno 
+      Serial.println("Server status: connected...\n"); // send response to Arduino Uno 
       
       client.print("POST /api/v1.6/devices/" + device + " HTTP/1.1\r\n");
       client.print("X-Auth-Token: ");
