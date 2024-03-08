@@ -35,11 +35,11 @@ void retrievalAndTransmission(){
       String value = getValue(data, ',', 4); // this variable is used to store sensor data
       Ubidots ubidots(token.c_str(), UBI_HTTP);
       ubidots.wifiConnect(ssid.c_str(), password.c_str());
-      ubidots.setDebug(true);  // Uncomment this line for printing debug messages
+      ubidots.setDebug(true);  // uncomment this line to printing debug messages
       ubidots.add(variable.c_str(),value.toInt());  // send data: variable & value
-      bool bufferSent = false;
-      bufferSent = ubidots.send();  // Will send data to a device label that matches the device Id
-      if(bufferSent){ Serial.println("Values sent by the device"); } // Do something if values were sent properly
+      bool bufferSent = false; // bufferSent is false
+      bufferSent = ubidots.send();  // will send data to a device label that matches the device Id
+      if(bufferSent){ Serial.println("Values sent by the device"); } // do something if values were sent properly
     }
     delay(1000); // time delay in loop
   }
