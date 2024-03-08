@@ -39,7 +39,6 @@ void retrievalAndTransmission(){
       ubidots.add(variable.c_str(),value.toInt());  // send data: variable & value
       boolean bufferSent = false; // this variable is initially set to false
       bufferSent = ubidots.send();  // will send data to a device label that matches the device Id
-      if(bufferSent){ Serial.println("Data successfully sent to Ubidots\n\n"); } // do something if values were sent properly
     }
     delay(1000); // time delay in loop
   }
