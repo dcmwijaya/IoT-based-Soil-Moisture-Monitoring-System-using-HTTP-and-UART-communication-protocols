@@ -114,7 +114,7 @@ void manageData(String ssid, String password, String host, int port, String toke
     if(client.connect(host, port)){ // if client is connected then do :
       Serial.println("Server status: connected\n"); // send response to Arduino Uno 
 
-      // http request on rest API
+      // http post is used to send data to a server to create/update a resource
       client.print("POST /api/v1.6/variables/"+variableID+" HTTP/1.1\r\n");
       client.print("Host: "+host+"\r\n");
       client.print("X-Auth-Token: ");
