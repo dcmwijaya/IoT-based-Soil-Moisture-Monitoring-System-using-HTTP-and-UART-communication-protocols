@@ -33,12 +33,12 @@ void retrievalAndTransmission(){
       String token = getValue(data, ',', 2); // this variable is used to store ubidots token data
       String variable = getValue(data, ',', 3); // this variable is used to store ubidots variable (topic) data
       String value = getValue(data, ',', 4); // this variable is used to store sensor data
-      Ubidots ubidots(token.c_str(), UBI_HTTP);
-      ubidots.wifiConnect(ssid.c_str(), password.c_str());
-//      ubidots.setDebug(true);  // uncomment this line to printing debug messages
-      ubidots.add(variable.c_str(),value.toInt());  // send data: variable & value
+      Ubidots ubidots(token.c_str(), UBI_HTTP); // this object is used to store token data and http ubidot data
+      ubidots.wifiConnect(ssid.c_str(), password.c_str()); // this method is used to connect to the router
+//      ubidots.setDebug(true);  // this method is used to printing debug messages
+      ubidots.add(variable.c_str(),value.toInt());  // this method is used to send variable data & value data
       boolean bufferSent = false; // this variable is initially set to false
-      bufferSent = ubidots.send();  // will send data to a device label that matches the device Id
+      bufferSent = ubidots.send();  // this method is used to send data to the device label corresponding to the device Id
     }
     delay(1000); // time delay in loop
   }
