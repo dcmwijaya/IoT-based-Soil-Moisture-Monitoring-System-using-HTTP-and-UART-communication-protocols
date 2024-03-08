@@ -75,3 +75,121 @@ Coming Soon...
 
 <br><br>
 
+## Arduino IDE Setup
+1. Open the ``` Arduino IDE ``` first, then open the project by clicking ``` File ``` -> ``` Open ``` :
+
+   <table><tr><td width="810">
+   
+      • ``` Master.ino ```
+      
+      • ``` Slave.ino ```
+
+   </td></tr></table><br>
+   
+2. Fill in the ``` Additional Board Manager URLs ``` in Arduino IDE
+
+   <table><tr><td width="810">
+      
+      Click ``` File ``` -> ``` Preferences ``` -> enter the ``` Boards Manager Url ``` by copying the following link :
+   
+      ```
+      http://arduino.esp8266.com/stable/package_esp8266com_index.json
+      ```
+
+   </td></tr></table><br>
+   
+3. ``` Board Setup ``` in Arduino IDE
+
+   <table>
+      <tr><th>
+         
+      i
+         
+      </th><th width="780">
+            
+      How to setup the ``` Arduino Uno ``` board
+   
+      </th></tr>
+      <tr><td colspan="2">
+
+      Click ``` Tools ``` -> ``` Board ``` -> ``` Arduino AVR Boards ``` -> ``` Arduino Uno ```
+              
+      </td></tr>
+   </table><br><table>
+      <tr><th>
+         
+      ii
+         
+      </th><th width="775">
+
+      How to setup the ``` ESP-01S ``` board
+            
+      </th></tr>
+      <tr><td colspan="2">
+
+      • Click ``` Tools ``` section -> ``` Board ``` -> ``` Boards Manager ``` -> Install ``` esp8266 ```.
+
+      • Then click ``` Tools ``` -> ``` Board ``` -> ``` ESP8266 Boards ``` -> ``` Generic ESP8266 Module ```.
+            
+      </td></tr>
+   </table><br>
+   
+4. ``` Change the Board Speed ``` in Arduino IDE
+
+   <table>
+      <tr><th>
+         
+      i
+         
+      </th><th width="780">
+            
+      How to change the speed of ``` Arduino Uno ``` board
+   
+      </th></tr>
+      <tr><td colspan="2">
+
+      Click ``` Tools ``` -> ``` Upload Speed ``` -> ``` 9600 ```
+              
+      </td></tr>
+   </table><br><table>
+      <tr><th>
+         
+      ii
+         
+      </th><th width="775">
+
+      How to change the speed of ``` ESP-01S ``` board
+            
+      </th></tr>
+      <tr><td colspan="2">
+
+      Click ``` Tools ``` -> ``` Upload Speed ``` -> ``` 9600 ```
+            
+      </td></tr>
+   </table><br>
+   
+5. ``` Install Library ``` in Arduino IDE
+
+   <table><tr><td width="810">
+         
+      Download all the library zip files. Then paste it in the: ``` C:\Users\Computer_Username\Documents\Arduino\libraries ```
+
+   </td></tr></table><br>
+
+6. ``` Port Setup ``` in Arduino IDE
+
+   <table><tr><td width="810">
+         
+      Click ``` Port ``` -> Choose according to your device port ``` (you can see in device manager) ```
+
+   </td></tr></table><br>
+
+7. Change the ``` WiFi Name ```, ``` WiFi Password ```, and so on according to what you are currently using.<br><br>
+
+8. Before uploading the program please click: ``` Verify ```.<br><br>
+
+9. If there is no error in the program code, then please click: ``` Upload ```.<br><br>
+
+10. If there is still a problem when uploading the program, then try checking the ``` driver ``` / ``` port ``` / ``` others ``` section.
+
+<br><br>
