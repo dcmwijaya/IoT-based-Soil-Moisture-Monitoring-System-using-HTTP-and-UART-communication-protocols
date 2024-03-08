@@ -189,7 +189,7 @@ Pada dasarnya, suatu perangkat itu dapat dikomunikasikan dengan perangkat lain b
 
 8. Sebelum mengunggah program, silakan klik: ``` Verify ```.<br><br>
 
-9. Jika tidak ada kesalahan dalam kode program, silakan klik: ``` Upload ```.<br><br>
+9. Jika tidak ada kesalahan dalam kode program, langkah selanjutnya yaitu menggunakan alat pemrograman ``` ESP-01 ``` sesuai dengan prosedur. Kemudian klik: ``` Upload ```. Sedangkan ``` Arduino Uno ``` dapat dilakukan secara langsung tanpa menggunakan alat pemrograman.<br><br>
 
 10. Jika masih ada masalah saat unggah program, maka coba periksa pada bagian ``` driver ``` / ``` port ``` / ``` alat pemrogram ``` / ``` yang lainnya ```.
 
