@@ -6,3 +6,223 @@
 # IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols
 <strong>Proyek Tunggal: Sistem Pemantauan Kelembaban Tanah berbasis IoT menggunakan protokol komunikasi HTTP dan UART</strong><br><br>
 Segera Hadir...
+
+<br><br>
+
+## Kebutuhan Proyek
+| Bagian | Deskripsi |
+| --- | --- |
+| Papan Pengembangan | • Arduino Uno R3<br>• ESP-01S |
+| Editor Kode | Arduino IDE |
+| Alat Pemrogram | Pemrogram ESP-01 |
+| Driver | USB-Serial CH340 |
+| Platform IoT | Ubidots |
+| Protokol Komunikasi | • Hypertext Transfer Protocol (HTTP)<br>• Universal Asynchronous Receiver-Transmitter (UART) |
+| Arsitektur IoT | 3 Lapisan |
+| Programming Language | C/C++ |
+| Arduino Library | • SoftwareSerial (default)<br>• Ubidots-ESP8266 |
+| Sensor | Sensor Kelembaban Tanah Kapasitif (x1) |
+| Other Components | • Kabel USB tipe B - USB tipe A (x1)<br>• Kabel jumper (1 set)<br>• Adapter ESP-01 (x1) |
+
+<br><br>
+
+## Unduh & Instal
+1. Arduino IDE
+
+   <table><tr><td width="810">
+         
+   ```
+   https://www.arduino.cc/en/software
+   ```
+
+   </td></tr></table><br>
+   
+2. USB-Serial CH340
+
+   <table><tr><td width="810">
+   
+   ```
+   https://bit.ly/CH340_Driver
+   ```
+   
+   </td></tr></table>
+   
+<br><br>
+
+## Rancangan Proyek
+<table>
+<tr>
+<th width="420">Diagram Blok</th>
+<th width="420">Diagram Ilustrasi</th>
+</tr>
+<tr>
+<td><img src="" alt="Block-Diagram"></td>
+<td><img src="" alt="Pictorial-Diagram"></td>
+</tr>
+</table>
+<table>
+<tr>
+<th width="840">Pengkabelan</th>
+</tr>
+<tr>
+<td><img src="" alt="Wiring"></td>
+</tr>
+</table>
+
+<br><br>
+
+## Pengetahuan Dasar
+Segera Hadir...
+
+<br><br>
+
+## Pengaturan Arduino IDE
+1. Buka ``` Arduino IDE ``` terlebih dahulu, kemudian buka proyek dengan cara klik ``` File ``` -> ``` Open ``` :
+
+   <table><tr><td width="810">
+   
+      • ``` Master.ino ```
+      
+      • ``` Slave.ino ```
+
+   </td></tr></table><br>
+   
+2. Isi ``` Url Pengelola Papan Tambahan ``` di Arduino IDE
+
+   <table><tr><td width="810">
+      
+      Klik ``` File ``` -> ``` Preferences ``` -> masukkan ``` Boards Manager Url ``` dengan menyalin tautan berikut :
+   
+      ```
+      http://arduino.esp8266.com/stable/package_esp8266com_index.json
+      ```
+
+   </td></tr></table><br>
+   
+3. ``` Pengaturan Board ``` di Arduino IDE
+
+   <table>
+      <tr><th>
+         
+      i
+         
+      </th><th width="780">
+            
+      Cara mengatur board ``` Arduino Uno ```
+   
+      </th></tr>
+      <tr><td colspan="2">
+
+      Klik ``` Tools ``` -> ``` Board ``` -> ``` Arduino AVR Boards ``` -> ``` Arduino Uno ```
+              
+      </td></tr>
+   </table><br><table>
+      <tr><th>
+         
+      ii
+         
+      </th><th width="775">
+
+      Cara mengatur board ``` ESP-01S ```
+            
+      </th></tr>
+      <tr><td colspan="2">
+
+      • Klik bagian ``` Tools ``` -> ``` Board ``` -> ``` Boards Manager ``` -> Instal ``` esp8266 ```.
+
+      • Kemudian klik ``` Tools ``` -> ``` Board ``` -> ``` ESP8266 Boards ``` -> ``` Generic ESP8266 Module ```.
+            
+      </td></tr>
+   </table><br>
+   
+4. ``` Ubah Kecepatan Papan ``` di Arduino IDE
+
+   <table>
+      <tr><th>
+         
+      i
+         
+      </th><th width="780">
+            
+      Cara mengubah kecepatan board ``` Arduino Uno ```
+   
+      </th></tr>
+      <tr><td colspan="2">
+
+      Klik ``` Tools ``` -> ``` Upload Speed ``` -> ``` 9600 ```
+              
+      </td></tr>
+   </table><br><table>
+      <tr><th>
+         
+      ii
+         
+      </th><th width="775">
+
+      Cara mengubah kecepatan board ``` ESP-01S ```
+            
+      </th></tr>
+      <tr><td colspan="2">
+
+      Klik ``` Tools ``` -> ``` Upload Speed ``` -> ``` 9600 ```
+            
+      </td></tr>
+   </table><br>
+   
+5. ``` Instal Pustaka ``` di Arduino IDE
+
+   <table><tr><td width="810">
+     
+      Unduh semua file zip pustaka. Lalu tempelkan di: ``` C:\Users\Computer_Username\Documents\Arduino\libraries ```
+
+   </td></tr></table><br>
+
+6. ``` Pengaturan Port ``` di Arduino IDE
+
+   <table><tr><td width="810">
+
+      Klik ``` Port ``` -> pilih sesuai dengan port perangkat anda ``` (anda dapat melihatnya di Device Manager) ```
+         
+   </td></tr></table><br>
+
+7. Ubah ``` Nama WiFi ```, ``` Kata Sandi WiFi ```, dan sebagainya sesuai dengan apa yang anda gunakan saat ini.<br><br>
+
+8. Sebelum mengunggah program, silakan klik: ``` Verify ```.<br><br>
+
+9. Jika tidak ada kesalahan dalam kode program, silakan klik: ``` Upload ```.<br><br>
+
+10. Jika masih ada masalah saat unggah program, maka coba periksa pada bagian ``` driver ``` / ``` port ``` / ``` yang lainnya ```.
+
+<br><br>
+
+## Memulai
+1. Unduh dan ekstrak repositori ini.<br><br>
+
+2. Pastikan anda memiliki komponen elektronik yang diperlukan.<br><br>
+   
+3. Pastikan komponen anda telah dirancang sesuai dengan diagram.<br><br>
+   
+4. Konfigurasikan perangkat anda menurut pengaturan di atas.<br><br>
+    
+5. Selamat menikmati [Selesai].
+
+<br><br>
+
+## Sorotan
+<img src="" alt="soil-moisture">
+
+<br><br>
+
+## Penafian
+Aplikasi ini dibuat dengan menyertakan sumber-sumber dari pihak ketiga. Pihak ketiga di sini adalah penyedia layanan, yang layanannya berupa pustaka, kerangka kerja, dan lain-lain. Saya ucapkan terima kasih banyak atas layanannya. Telah terbukti sangat membantu dan dapat diimplementasikan.
+
+<br><br>
+
+## LISENSI
+LISENSI MIT - Hak Cipta © 2024 - Devan C. M. Wijaya, S.Kom
+
+Dengan ini diberikan izin tanpa biaya kepada siapa pun yang mendapatkan salinan perangkat lunak ini dan file dokumentasi terkait perangkat lunak untuk menggunakannya tanpa batasan, termasuk namun tidak terbatas pada hak untuk menggunakan, menyalin, memodifikasi, menggabungkan, mempublikasikan, mendistribusikan, mensublisensikan, dan/atau menjual salinan Perangkat Lunak ini, dan mengizinkan orang yang menerima Perangkat Lunak ini untuk dilengkapi dengan persyaratan berikut:
+
+Pemberitahuan hak cipta di atas dan pemberitahuan izin ini harus menyertai semua salinan atau bagian penting dari Perangkat Lunak.
+
+DALAM HAL APAPUN, PENULIS ATAU PEMEGANG HAK CIPTA DI SINI TETAP MEMILIKI HAK KEPEMILIKAN PENUH. PERANGKAT LUNAK INI DISEDIAKAN SEBAGAIMANA ADANYA, TANPA JAMINAN APAPUN, BAIK TERSURAT MAUPUN TERSIRAT, OLEH KARENA ITU JIKA TERJADI KERUSAKAN, KEHILANGAN, ATAU LAINNYA YANG TIMBUL DARI PENGGUNAAN ATAU URUSAN LAIN DALAM PERANGKAT LUNAK INI, PENULIS ATAU PEMEGANG HAK CIPTA TIDAK BERTANGGUNG JAWAB, KARENA PENGGUNAAN PERANGKAT LUNAK INI TIDAK DIPAKSAKAN SAMA SEKALI, SEHINGGA RISIKO ADALAH MILIK ANDA SENDIRI.
