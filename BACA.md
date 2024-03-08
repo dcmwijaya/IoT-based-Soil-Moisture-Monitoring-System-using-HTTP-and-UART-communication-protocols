@@ -189,7 +189,7 @@ Pada dasarnya, suatu perangkat itu dapat dikomunikasikan dengan perangkat lain b
 
 8. Sebelum mengunggah program, silakan klik: ``` Verify ```.<br><br>
 
-9. Jika tidak ada kesalahan dalam kode program, silakan klik: ``` Upload ```.<br><br>
+9. Jika tidak ada kesalahan dalam kode program, silakan klik: ``` Upload ```. Khusus pada board ``` ESP-01S ```, anda harus mengatur alat pemrogram terlebih dahulu sebelum digunakan dengan mengikuti langkah-langkah yang sudah disediakan.<br><br>
 
 10. Jika masih ada masalah saat unggah program, maka coba periksa pada bagian ``` driver ``` / ``` port ``` / ``` yang lainnya ```.
 
