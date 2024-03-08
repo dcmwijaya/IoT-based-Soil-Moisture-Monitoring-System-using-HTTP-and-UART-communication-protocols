@@ -195,6 +195,11 @@ Pada dasarnya, suatu perangkat itu dapat dikomunikasikan dengan perangkat lain b
 
 <br><br>
 
+## Pengaturan Alat Pemrogram: ESP-01
+Segera Hadir...
+
+<br><br>
+
 ## Memulai
 1. Unduh dan ekstrak repositori ini.<br><br>
 
@@ -205,11 +210,6 @@ Pada dasarnya, suatu perangkat itu dapat dikomunikasikan dengan perangkat lain b
 4. Konfigurasikan perangkat anda menurut pengaturan di atas.<br><br>
     
 5. Selamat menikmati [Selesai].
-
-<br><br>
-
-## Pengaturan Alat Pemrogram: ESP-01
-Segera Hadir...
 
 <br><br>
 
