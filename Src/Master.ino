@@ -1,6 +1,5 @@
 // library initialization
 #include <ESP8266WiFi.h> // calls a library called ESP8266WiFi
-#include <ESP8266HTTPClient.h> // calls a library called ESP8266HTTPClient
 
 // object initialization
 WiFiClient client; // names the object of WiFiClient with the name -> client
@@ -10,7 +9,7 @@ WiFiClient client; // names the object of WiFiClient with the name -> client
 #define drySoil 380 // define the minimum value that is considered as 'dry' soil
 String data; // this variable is used to receive response from Arduino Uno
 boolean StringReady = false; // this variable is initially set to false
-String status; // this variable is used to accommodate soil status
+int status; // this variable is used to accommodate soil status (1:wet, 2:moist, 3:dry)
 unsigned long previousMillis = 0; // this variable will store last time sensor was updated
 const long interval = 1000; // this variable as the interval to send data to IoT Platform (milliseconds)
 
@@ -37,6 +36,7 @@ void WiFiconnection(String ssid, String password){
   if(WiFi.status() != WL_CONNECTED){ // if not successfully connect to the WiFi then :
     Serial.println("WiFi status: not connected"); // send response to Arduino Uno
   }
+  WiFi.setAutoReconnect(true);
 }
 
 // Method: RetrievalTransmission
@@ -51,14 +51,13 @@ void RetrievalTransmission(){
       data.trim(); // remove existing spaces
       String ssid = getValue(data, ',', 0); // this variable is used to store ssid data
       String password = getValue(data, ',', 1); // this variable is used to store password data
-      String server = getValue(data, ',', 2); // this variable is used to store ubidots server data
+      String host = getValue(data, ',', 2); // this variable is used to store ubidots host data
       String port = getValue(data, ',', 3); // this variable is used to store ubidots port data
-      String device = getValue(data, ',', 4); // this variable is used to store ubidots device data
-      String token = getValue(data, ',', 5); // this variable is used to store ubidots token data
-      String topic1 = getValue(data, ',', 6); // this variable is used to store ubidots topic 1 data
-      String topic2 = getValue(data, ',', 7); // this variable is used to store ubidots topic 2 data
-      String sensorValue = getValue(data, ',', 8); // this variable is used to store sensor data
-      manageData(ssid, password, server, port.toInt(), device, token, topic1, topic2, sensorValue.toInt()); // input ssid, password, server, port, device, token, topic1, topic2, sensorValue data into the sendData method
+      String token = getValue(data, ',', 4); // this variable is used to store ubidots token data
+      String variable = getValue(data, ',', 5); // this variable is used to store ubidots variable data
+      String variableID = getValue(data, ',', 6); // this variable is used to store ubidots variableID data
+      String sensorValue = getValue(data, ',', 7); // this variable is used to store sensor data
+      manageData(ssid, password, host, port.toInt(), token, variable, variableID, sensorValue.toInt()); // input ssid, password, server, port, device, token, topic1, topic2, sensorValue data into the sendData method
     }
     delay(1000); // time delay in loop
   }
@@ -88,16 +87,16 @@ String getValue(String data, char separator, int index){ // there are 3 paramete
 void soilCondition(int sensorValue){
   // determine status of soil
   if (sensorValue < wetSoil) { // if the sensor value is less than 277 then :
-    status = "wet"; // wet soil conditions
+    status = 1; // wet soil conditions
   } else if (sensorValue >= wetSoil && sensorValue < drySoil) { // if the sensor value is within the range of 277 - 380 then :
-    status = "moist"; // moist soil conditions
+    status = 2; // moist soil conditions
   } else { // if the sensor value is not in wet and moist conditions then :
-    status = "dry"; // dry soil conditions
+    status = 3; // dry soil conditions
   }
 }
 
 // Method: manageData
-void manageData(String ssid, String password, String server, int port, String device, String token, String topic1, String topic2, int sensorValue){
+void manageData(String ssid, String password, String host, int port, String token, String variable, String variableID, int sensorValue){
   unsigned long currentMillis = millis(); // to save the current time
 
   if (currentMillis - previousMillis >= interval) { // if the current time minus the previous time is greater than equal to the interval then :
@@ -106,25 +105,25 @@ void manageData(String ssid, String password, String server, int port, String de
     WiFiconnection(ssid, password); // input ssid and password data into the WiFiconnection method
     soilCondition(sensorValue); // input sensorValue data into the soilCondition method
     
-    Serial.println("\nServer status: connecting to "+server); // send response to Arduino Uno
+    Serial.println("\nServer status: connecting to "+host); // send response to Arduino Uno
     
-    if(!client.connect(server, port)){ // if client is not connected then do :
+    if(!client.connect(host, port)){ // if client is not connected then do :
       Serial.println("Server status: not connected");  // send response to Arduino Uno 
     }
     
-    else if (client.connect(server, port)) { // if client is connected then do :
+    if(client.connect(host, port)){ // if client is connected then do :
       Serial.println("Server status: connected\n"); // send response to Arduino Uno 
       
-      client.print("POST /api/v1.6/devices/"+device+" HTTP/1.1\r\n");
-      client.print("Content-Type: application/json\r\n");
+      client.print("POST /api/v1.6/variables/"+variableID+" HTTP/1.1\r\n");
+      client.print("Host: "+host+"\r\n");
       client.print("X-Auth-Token: ");
       client.print(token);
-      client.print("\r\nHost: "+server+"\r\n\n");
+      client.print("\r\n");
+      client.print("Content-Type: application/json\r\n");
       
       String buff = "";
       buff += "{";
-      buff += "\""+topic1+"\":"+sensorValue+", ";
-      buff += "\""+topic2+"\":"+status+"";
+      buff += "\""+variable+"\":"+sensorValue;
       buff += "}\r\n";
       
       int dataLength = buff.length()-1;
@@ -133,11 +132,15 @@ void manageData(String ssid, String password, String server, int port, String de
       client.println(dataLengthStr);
       client.println();
       client.println(buff); 
-        
-      while(client.available()){ // if client is connected then do :
-        char c = client.read(); // this variable is used to read the data sent to the IoT Platform
-        Serial.write(c);  // open this to check delivery status
-      }
+    }
+
+    while(client.available()){ // if our connection to Ubidots is healthy, read the response from Ubidots and print it to our Serial Monitor for debugging!
+      char c = client.read(); 
+      Serial.print(c);
+    }
+    
+    if(client.connected()){ // done with this iteration, close the connection
+      Serial.println("Disconnecting from Ubidots...");
       client.stop();
     }
   }
