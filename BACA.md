@@ -19,10 +19,10 @@ Segera Hadir...
 | Platform IoT | Ubidots |
 | Protokol Komunikasi | • Hypertext Transfer Protocol (HTTP)<br>• Universal Asynchronous Receiver-Transmitter (UART) |
 | Arsitektur IoT | 3 Lapisan |
-| Programming Language | C/C++ |
-| Arduino Library | • SoftwareSerial (default)<br>• Ubidots-ESP8266 |
+| Bahasa Pemrograman | C/C++ |
+| Pustaka Arduino | • SoftwareSerial (default)<br>• Ubidots-ESP8266 |
 | Sensor | Sensor Kelembaban Tanah Kapasitif (x1) |
-| Other Components | • Kabel USB tipe B - USB tipe A (x1)<br>• Kabel jumper (1 set)<br>• Adapter ESP-01 (x1) |
+| Komponen Lainnya | • Kabel USB tipe B - USB tipe A (x1)<br>• Kabel jumper (1 set)<br>• Adapter ESP-01 (x1) |
 
 <br><br>
 
