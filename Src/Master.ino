@@ -37,7 +37,7 @@ void retrievalAndTransmission(){
       ubidots.wifiConnect(ssid.c_str(), password.c_str());
       ubidots.setDebug(true);  // uncomment this line to printing debug messages
       ubidots.add(variable.c_str(),value.toInt());  // send data: variable & value
-      bool bufferSent = false; // bufferSent is false
+      boolean bufferSent = false; // this variable is initially set to false
       bufferSent = ubidots.send();  // will send data to a device label that matches the device Id
       if(bufferSent){ Serial.println("Values sent by the device"); } // do something if values were sent properly
     }
