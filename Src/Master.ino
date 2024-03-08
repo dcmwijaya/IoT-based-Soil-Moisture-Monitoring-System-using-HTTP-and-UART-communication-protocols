@@ -31,7 +31,7 @@ void retrievalAndTransmission(){
       String ssid = getValue(data, ',', 0); // this variable is used to store ssid data
       String password = getValue(data, ',', 1); // this variable is used to store password data
       String token = getValue(data, ',', 2); // this variable is used to store ubidots token data
-      String variable = getValue(data, ',', 3); // this variable is used to store ubidots variable data
+      String variable = getValue(data, ',', 3); // this variable is used to store ubidots variable (topic) data
       String value = getValue(data, ',', 4); // this variable is used to store sensor data
       Ubidots ubidots(token.c_str(), UBI_HTTP);
       ubidots.wifiConnect(ssid.c_str(), password.c_str());
