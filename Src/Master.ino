@@ -40,7 +40,7 @@ void retrievalAndTransmission(){
       boolean bufferSent = false; // this variable is initially set to false
       bufferSent = ubidots.send();  // this method is used to send data to the device label corresponding to the device Id
     }
-    delay(1000); // time delay in loop
+    delay(5000); // time delay in loop
   }
 }
 
