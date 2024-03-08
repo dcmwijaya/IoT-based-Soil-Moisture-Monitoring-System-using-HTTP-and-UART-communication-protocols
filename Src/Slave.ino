@@ -8,12 +8,11 @@ SoftwareSerial espSerial(6, 7); // 6 As RX pin, 7 As TX pin -> Arduino Uno to ES
 const int sensorPin = A0; // define analog input using pin: A0
 const String ssid = "YOUR_WIFI_NAME"; // define ssid name
 const String password = "YOUR_WIFI_PASSWORD"; // define ssid password
-const String server = "things.ubidots.com"; // define server
+const String host = "things.ubidots.com"; // define host (server)
 const int port = 80; // define ubidots port
-const String device = "YOUR_UBIDOTS_DEVICE"; // define ubidots device
 const String token = "YOUR_UBIDOTS_TOKEN"; // define ubidots token
-const String topic1 = "YOUR_UBIDOTS_TOPIC1"; // define ubidots topic 1
-const String topic2 = "YOUR_UBIDOTS_TOPIC2"; // define ubidots topic 2
+const String variable = "YOUR_UBIDOTS_VARIABLE"; // define ubidots variable
+const String variableID = "YOUR_UBIDOTS_VARIABLE_ID"; // define ubidots variable (topic) ID
 int sensorValue; // this variable is used to store the soil moisture sensor value
 String response; // this variable is used to receive response from ESP-01S
 String Msg; // this variable is used to store all String data that will be sent
@@ -51,13 +50,12 @@ void sendData(){
     previousMillis = currentMillis; // previous time is the same as the current time
     Msg = ssid+","; // first data sent
     Msg += password+","; // second data sent
-    Msg += server+","; // third data sent
+    Msg += host+","; // third data sent
     Msg += port+","; // fourth data sent
-    Msg += device+","; // fifth data sent
-    Msg += token+","; // sixth data sent
-    Msg += topic1+","; // seventh data sent
-    Msg += topic2+","; // eighth data sent
-    Msg += sensorValue; // ninth data sent
+    Msg += token+","; // fifth data sent
+    Msg += variable+","; // sixth data sent
+    Msg += variableID+","; // seventh data sent
+    Msg += sensorValue; // eighth data sent
     espSerial.print(Msg); // send data from Arduino Uno to ESP-01S with UART communication
   }
 }
