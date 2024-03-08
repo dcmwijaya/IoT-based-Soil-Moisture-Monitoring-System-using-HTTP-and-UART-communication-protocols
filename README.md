@@ -18,6 +18,7 @@ Coming Soon...
 | Driver | USB-Serial CH340 |
 | IoT Platform | Ubidots |
 | Communications Protocol | • Hypertext Transfer Protocol (HTTP)<br>• Universal Asynchronous Receiver-Transmitter (UART) |
+| IoT Architecture | 3 Layer |
 | Programming Language | C/C++ |
 | Arduino Library | • SoftwareSerial (default)<br>• Ubidots-ESP8266 |
 | Sensor | Capacitive Soil Moisture Sensor (x1) |
