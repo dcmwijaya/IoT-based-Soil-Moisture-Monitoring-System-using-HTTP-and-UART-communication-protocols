@@ -15,11 +15,11 @@ void setup() {
 
 // Method: loop
 void loop() { 
-  retrievalTransmissionData(); // calling the retrievalTransmissionData method
+  retrievalAndTransmission(); // calling the retrievalAndTransmission method
 }
 
-// Method: retrievalTransmissionData
-void retrievalTransmissionData(){
+// Method: retrievalAndTransmission
+void retrievalAndTransmission(){
   data = ""; // this String data type is used to store data obtained from serial communication
   if(Serial.available()){ // if serial communication is connected then do :
     while(Serial.available()){ // this loop is used to read the serial communication data from the Arduino Uno
