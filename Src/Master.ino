@@ -113,19 +113,18 @@ void manageData(String ssid, String password, String host, int port, String toke
     
     if(client.connect(host, port)){ // if client is connected then do :
       Serial.println("Server status: connected\n"); // send response to Arduino Uno 
-      
+
+      // http request on rest API
       client.print("POST /api/v1.6/variables/"+variableID+" HTTP/1.1\r\n");
       client.print("Host: "+host+"\r\n");
       client.print("X-Auth-Token: ");
       client.print(token);
       client.print("\r\n");
       client.print("Content-Type: application/json\r\n");
-      
       String buff = "";
       buff += "{";
       buff += "\""+variable+"\":"+sensorValue;
       buff += "}\r\n";
-      
       int dataLength = buff.length()-1;
       String dataLengthStr = String(dataLength);
       client.print("Content-Length: ");
@@ -134,14 +133,14 @@ void manageData(String ssid, String password, String host, int port, String toke
       client.println(buff); 
     }
 
-    while(client.available()){ // if our connection to Ubidots is healthy, read the response from Ubidots and print it to our Serial Monitor for debugging!
-      char c = client.read(); 
-      Serial.print(c);
+    while(client.available()){ // while client is connected then do :
+      char c = client.read(); // this variable is used to read the data sent to the IoT Platform
+      Serial.print(c); // send response to Arduino Uno
     }
     
-    if(client.connected()){ // done with this iteration, close the connection
-      Serial.println("Disconnecting from Ubidots...");
-      client.stop();
+    if(client.connected()){ // if client is connected then do :
+      Serial.println("Disconnecting from Ubidots..."); // send response to Arduino Uno
+      client.stop(); // done with this iteration, close the connection
     }
   }
 }
