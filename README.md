@@ -52,20 +52,14 @@ ESP-01S projects made by most people generally use AT commands. These AT command
 ## Project Designs
 <table>
 <tr>
-<th width="420">Block Diagram</th>
-<th width="420">Pictorial Diagram</th>
+<th width="280">Block Diagram</th>
+<th width="280">Pictorial Diagram</th>
+<th width="280">Wiring</th>
 </tr>
 <tr>
 <td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/d962fdad-65e0-46df-9081-20a3c6d76160" alt="Block-Diagram"></td>
 <td><img src="" alt="Pictorial-Diagram"></td>
-</tr>
-</table>
-<table>
-<tr>
-<th width="840">Wiring</th>
-</tr>
-<tr>
-<td><img src="" alt="Wiring"></td>
+<td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/8dd46fa8-211d-46de-ae3f-bd24df3c9c72" alt="Wiring"></td>
 </tr>
 </table>
 
