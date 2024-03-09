@@ -59,7 +59,7 @@ Proyek ESP-01S yang dibuat oleh kebanyakan orang umumnya menggunakan perintah AT
 <tr>
 <td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/d962fdad-65e0-46df-9081-20a3c6d76160" alt="Block-Diagram"></td>
 <td><img src="" alt="Pictorial-Diagram"></td>
-<td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/8dd46fa8-211d-46de-ae3f-bd24df3c9c72" alt="Wiring"></td>
+<td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/49e551c2-eb98-4453-8eb5-d3751fc60c37" alt="Wiring"></td>
 </tr>
 </table>
 
