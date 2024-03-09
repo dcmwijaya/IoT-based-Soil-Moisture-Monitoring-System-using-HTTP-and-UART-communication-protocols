@@ -218,6 +218,11 @@ Coming Soon...
 
 <br><br>
 
+## Appreciation
+If you find this work useful, please support it as a token of appreciation to the author by clicking the ``` ⭐Star ``` button.
+
+<br><br>
+
 ## Disclaimer
 This application has been created by including third-party sources. Third parties here are service providers, whose services are in the form of libraries, frameworks, and others. I thank you very much for the service. It has proven to be very helpful and implementable.
 
