@@ -58,7 +58,7 @@ ESP-01-based IoT systems generally use AT commands to be able to perform actions
 </tr>
 <tr>
 <td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/36612e47-62b8-4eab-8232-b0616c47d8a6" alt="Block-Diagram"></td>
-<td><img src="" alt="Pictorial-Diagram"></td>
+<td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/e0458ee4-b685-4296-b3fc-d4bb20823891" alt="Pictorial-Diagram"></td>
 <td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/2ec91826-9f04-4548-9ac5-9db08d28738d" alt="Wiring"></td>
 </tr>
 </table>
