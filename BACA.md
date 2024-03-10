@@ -52,12 +52,20 @@ Sistem IoT berbasis ESP-01 umumnya menggunakan perintah AT untuk dapat melakukan
 ## Rancangan Proyek
 <table>
 <tr>
-<th width="280">Diagram Blok</th>
-<th width="280">Diagram Ilustrasi</th>
-<th width="280">Pengkabelan</th>
+<th width="420">Diagram Blok</th>
+<th width="420">Infrastruktur</th>
 </tr>
 <tr>
 <td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/36612e47-62b8-4eab-8232-b0616c47d8a6" alt="Block-Diagram"></td>
+<td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/6327e020-3576-42ce-a801-83a1ed5ca29b" alt="Infrastructure"></td>
+</tr>
+</table>
+<table>
+<tr>
+<th width="420">Diagram Ilustrasi</th>
+<th width="420">Pengkabelan</th>
+</tr>
+<tr>
 <td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/e0458ee4-b685-4296-b3fc-d4bb20823891" alt="Pictorial-Diagram"></td>
 <td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/2ec91826-9f04-4548-9ac5-9db08d28738d" alt="Wiring"></td>
 </tr>
