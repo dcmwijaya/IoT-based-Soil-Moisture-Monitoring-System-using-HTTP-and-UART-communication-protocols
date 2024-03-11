@@ -14,7 +14,7 @@ Sistem IoT berbasis ESP-01 umumnya menggunakan perintah AT untuk dapat melakukan
 | --- | --- |
 | Papan Pengembangan | • Arduino Uno R3<br>• ESP-01S |
 | Editor Kode | Arduino IDE |
-| Alat Pemrogram | Pemrogram ESP-01 |
+| Alat Pemrogram | USB CH340 ESP-01 |
 | Driver | USB-Serial CH340 |
 | Platform IoT | Ubidots |
 | Protokol Komunikasi | • Hypertext Transfer Protocol (HTTP)<br>• Universal Asynchronous Receiver-Transmitter (UART) |
@@ -197,14 +197,40 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
 
 8. Sebelum mengunggah program, silakan klik: ``` Verify ```.<br><br>
 
-9. Jika tidak ada kesalahan dalam kode program, langkah selanjutnya yaitu menggunakan alat pemrograman ``` ESP-01 ``` sesuai dengan prosedur. Kemudian klik: ``` Upload ```. Sedangkan ``` Arduino Uno ``` dapat dilakukan secara langsung tanpa menggunakan alat pemrograman.<br><br>
+9. Jika tidak ada kesalahan dalam kode program, langkah selanjutnya yaitu menggunakan alat pemrograman ``` USB CH340 ESP-01 ``` sesuai dengan prosedur. Kemudian klik: ``` Upload ```. Sedangkan ``` Arduino Uno ``` dapat dilakukan secara langsung tanpa menggunakan alat pemrograman.<br><br>
 
 10. Jika masih ada masalah saat unggah program, maka coba periksa pada bagian ``` driver ``` / ``` port ``` / ``` alat pemrogram ``` / ``` yang lainnya ```.
 
 <br><br>
 
-## Pengaturan Alat Pemrogram: ESP-01
-Segera Hadir...
+## Pengaturan Alat Pemrogram: USB CH340 ESP-01
+1. ``` Mode Pemrograman ``` :
+
+   • Pasang ``` ESP-01 ``` ke ``` USB CH340 ESP-01 ```.
+   
+   • Tekan dan tahan tombol yang ada di ``` USB CH340 ESP-01 ```, lalu tancapkan pada komputer/laptop.
+   
+   • Lepaskan tombol ketika perangkat sudah dikenali oleh komputer/laptop.
+   
+   • Silakan ``` unggah program ```.<br><br>
+   
+2. ``` Mode Pengoperasian ``` :
+   
+   • Lepaskan ``` USB CH340 ESP-01 ``` dari komputer/laptop.
+   
+   • Pasang ``` ESP-01 ``` ke ``` Adapter ESP-01 ```.
+   
+   • Kode program yang telah tertanam dalam ``` board ESP-01 ``` ini siap untuk dioperasikan (sudah tidak ada aktivitas pemrograman lagi).<br><br><br>
+
+<strong>Catatan :</strong>
+
+<table><tr><td width="840">
+
+   • Untuk mengunggah program, selain menggunakan ``` USB CH340 ESP-01 ```, anda juga dapat menggunakan alat pemrogram lainnya seperti: ``` FTDI FT232RL ``` atau ``` USB PL2303 ```.
+
+   • Berdasarkan pengalaman, saya akui bahwa penggunaan ``` USB CH340 ESP-01 ``` ini jauh lebih baik daripada ``` FTDI FT232RL ``` maupun ``` USB PL2303 ``` karena tidak membutuhkan kabel untuk dapat terhubung ke komputer/laptop.
+
+</td></tr></table>
 
 <br><br>
 
