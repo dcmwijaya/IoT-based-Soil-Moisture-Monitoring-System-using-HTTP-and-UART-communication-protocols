@@ -237,9 +237,9 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
 
    <table><tr><td width="810">
    
-      • Silakan <a href="https://industrial.ubidots.com/accounts/signin/">Masuk</a> agar dapat mengakses layanan Ubidots.
+      • Silakan <a href="https://industrial.ubidots.com/accounts/signin/">Masuk</a> agar dapat mengakses layanan ``` Ubidots ```.
       
-      • Jika anda belum memiliki akun Ubidots silakan buat dulu.
+      • Jika anda belum memiliki akun ``` Ubidots ``` silakan buat dulu.
 
    </td></tr></table><br>
 
@@ -259,7 +259,7 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
 
    </td></tr></table><br>
 
-4. Membuat dashboards : 
+3. Membuat dashboards : 
 
    <table><tr><td width="810">
    
@@ -267,17 +267,17 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
    
       • Klik ``` Add new Dashboard ```.
    
-      • Name, Tags, Default time range -> sesuaikan dengan kebutuhan anda.
+      • ``` Name ```, ``` Tags ```, ``` Default time range ``` -> sesuaikan dengan kebutuhan anda.
 
-      • Dynamic Dashboard -> ubah menjadi ``` Dynamic (Single Device) ```.
+      • ``` Dynamic Dashboard ``` -> ubah menjadi ``` Dynamic (Single Device) ```.
 
-      • Default Device -> pilih device yang ingin ditampilkan.
+      • ``` Default Device ``` -> pilih device yang ingin ditampilkan.
 
-      • Pengaturan yang lain biarkan saja -> kemudian pilih ``` SAVE ``` untuk menyimpan.
+      • Pengaturan yang lain biarkan saja -> kemudian klik ``` SAVE ``` untuk menyimpan.
 
    </td></tr></table><br>
 
-5. Membuat widget : 
+4. Membuat widget : 
 
    <table><tr><td width="810">
    
@@ -293,7 +293,7 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
 
    </td></tr></table><br>
 
-6. Konfigurasi firmware : 
+5. Konfigurasi firmware : 
 
    <table><tr><td width="810">
    
