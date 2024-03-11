@@ -285,9 +285,9 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
    
       • Silakan pilih sesuai dengan kebutuhan anda. Kalau di proyek ini, penulis menggunakan ``` Line chart ``` untuk visualisasi datanya.
    
-      • Silakan atur variabel yang ingin ditampilkan pada widget dengan cara klik ``` Add Variables ``` -> kemudian pilih ``` Save ``` untuk menyimpan.
+      • Silakan atur variabel yang ingin ditampilkan pada widget yaitu dengan cara klik ``` Add Variables ```, kemudian pilih ``` Save ``` untuk menyimpan.
    
-      • Jika ingin mengubah isi widget, silakan klik simbol ``` pensil ``` -> kemudian jika sudah pilih ``` Save ``` untuk menyimpan.
+      • Jika ingin mengubah isi widget, silakan klik simbol ``` pensil ``` -> kemudian jika sudah, pilih ``` ✅ Checklist ``` untuk menyimpan.
 
    </td></tr></table><br>
 
@@ -295,9 +295,9 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
 
    <table><tr><td width="810">
    
-      • Klik bagian kanan pojok atas bagian ``` User ``` -> lalu pilih bagian ``` API Credentials ```.
+      • Klik bagian ``` User ``` yang ada di pojok kanan atas -> lalu pilih ``` API Credentials ```.
    
-      • Salin ``` Default token ``` yang ada pada bagian ``` Tokens ``` -> lalu tempelkan pada kode firmware. Contohnya :
+      • Salin ``` Default token ``` -> lalu tempelkan pada kode firmware. Contohnya sebagai berikut:
 
       <table><tr><td width="780">
    
