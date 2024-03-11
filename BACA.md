@@ -203,7 +203,7 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
 
 <br><br>
 
-## Pengaturan Alat Pemrogram: USB CH340-ESP01
+## Pengaturan USB CH340-ESP01
 1. ``` Mode Pemrograman ``` :
 
    • Pasang ``` ESP-01 ``` ke ``` USB CH340-ESP01 ```.
@@ -226,9 +226,9 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
 
 <table><tr><td width="840">
 
-   • Untuk mengunggah program, selain menggunakan ``` USB CH340-ESP01 ```, anda juga dapat menggunakan alat pemrogram lainnya seperti: ``` FTDI FT232RL ``` atau ``` USB PL2303 ```.
+   • Untuk mengunggah program, selain menggunakan ``` USB CH340-ESP01 ```, anda juga dapat menggunakan alat pemrogram lainnya seperti: ``` USB CP2102 ```, ``` USB CH340 ```, ``` USB FTDI ```, atau ``` USB PL2303 ```.
 
-   • Berdasarkan pengalaman, saya akui bahwa penggunaan ``` USB CH340-ESP01 ``` ini jauh lebih baik daripada ``` FTDI FT232RL ``` maupun ``` USB PL2303 ``` karena tidak membutuhkan kabel untuk dapat terhubung ke komputer/laptop.
+   • Berdasarkan pengalaman, saya akui bahwa penggunaan ``` USB CH340-ESP01 ``` ini jauh lebih baik daripada alat pemrogram lainnya karena tidak membutuhkan kabel untuk dapat terhubung ke komputer/laptop.
 
 </td></tr></table><br><br>
 
