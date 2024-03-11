@@ -255,9 +255,11 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
 
       • ``` Device label ``` sesuaikan dengan apa yang ada di Ubidots sewaktu berhasil melakukan pengiriman data pertama kali, biasanya berbentuk ID.
 
+      • Pilih ``` ✅ Checklist ``` untuk menyimpan.
+
    </td></tr></table><br>
 
-3. Membuat dashboards : 
+4. Membuat dashboards : 
 
    <table><tr><td width="810">
    
@@ -275,7 +277,7 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
 
    </td></tr></table><br>
 
-4. Membuat widget : 
+5. Membuat widget : 
 
    <table><tr><td width="810">
    
@@ -285,13 +287,13 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
    
       • Silakan pilih sesuai dengan kebutuhan anda. Kalau di proyek ini, penulis menggunakan ``` Line chart ``` untuk visualisasi datanya.
    
-      • Silakan atur variabel yang ingin ditampilkan pada widget yaitu dengan cara klik ``` Add Variables ```, kemudian pilih ``` Save ``` untuk menyimpan.
+      • Silakan atur variabel yang ingin ditampilkan pada widget yaitu dengan cara klik ``` Add Variables ```, kemudian pilih ``` ✅ Checklist ``` untuk menyimpan.
    
       • Jika ingin mengubah isi widget, silakan klik simbol ``` pensil ``` -> kemudian jika sudah, pilih ``` ✅ Checklist ``` untuk menyimpan.
 
    </td></tr></table><br>
 
-5. Konfigurasi firmware : 
+6. Konfigurasi firmware : 
 
    <table><tr><td width="810">
    
