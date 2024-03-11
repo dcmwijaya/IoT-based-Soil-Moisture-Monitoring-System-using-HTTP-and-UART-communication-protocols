@@ -248,7 +248,18 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
 <br><br>
 
 ## Sorotan
-<img src="" alt="soil-moisture">
+<table>
+<tr>
+<th width="280">Perangkat Keras</th>
+<th width="280">Serial Monitor</th>
+<th width="280">IoT Platform: Ubidots</th>
+</tr>
+<tr>
+<td><img src="" alt="hardware"></td>
+<td><img src="" alt="serial-monitor"></td>
+<td><img src="" alt="iot-platform"></td>
+</tr>
+</table>
 
 <br><br>
 
