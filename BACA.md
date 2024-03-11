@@ -230,9 +230,7 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
 
    • Berdasarkan pengalaman, saya akui bahwa penggunaan ``` USB CH340 ESP-01 ``` ini jauh lebih baik daripada ``` FTDI FT232RL ``` maupun ``` USB PL2303 ``` karena tidak membutuhkan kabel untuk dapat terhubung ke komputer/laptop.
 
-</td></tr></table>
-
-<br><br>
+</td></tr></table><br><br>
 
 ## Memulai
 1. Unduh dan ekstrak repositori ini.<br><br>
@@ -252,7 +250,7 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
 <tr>
 <th width="280">Perangkat Keras</th>
 <th width="280">Serial Monitor</th>
-<th width="280">IoT Platform: Ubidots</th>
+<th width="280">Platform IoT: Ubidots</th>
 </tr>
 <tr>
 <td><img src="" alt="hardware"></td>
