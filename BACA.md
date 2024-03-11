@@ -251,11 +251,11 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
    
       • Klik ``` + (Create a device) ```.
    
-      • Pilih ``` Blank Device ```.
+      • Klik ``` Blank Device ```.
    
-      • Pada form ``` Device name ``` -> sesuaikan dengan kebutuhan anda.
+      • ``` Device name ``` sesuaikan dengan kebutuhan anda.
 
-      • Pada form ``` Device label ``` -> sesuaikan dengan yang ada di Ubidots ketika berhasil melakukan POST data (berupa ID).
+      • ``` Device label ``` sesuaikan dengan apa yang ada di Ubidots sewaktu berhasil melakukan pengiriman data pertama kali (biasanya ID Device).
 
    </td></tr></table><br>
 
