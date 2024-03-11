@@ -14,7 +14,7 @@ Sistem IoT berbasis ESP-01 umumnya menggunakan perintah AT untuk dapat melakukan
 | --- | --- |
 | Papan Pengembangan | • Arduino Uno R3<br>• ESP-01S |
 | Editor Kode | Arduino IDE |
-| Alat Pemrogram | USB CH340 ESP-01 |
+| Alat Pemrogram | CH340 USB to ESP-01 |
 | Driver | USB-Serial CH340 |
 | Platform IoT | Ubidots |
 | Protokol Komunikasi | • Hypertext Transfer Protocol (HTTP)<br>• Universal Asynchronous Receiver-Transmitter (UART) |
@@ -203,12 +203,12 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
 
 <br><br>
 
-## Pengaturan Alat Pemrogram: USB CH340 ESP-01
+## Pengaturan Alat Pemrogram: CH340 USB to ESP-01
 1. ``` Mode Pemrograman ``` :
 
-   • Pasang ``` ESP-01 ``` ke ``` USB CH340 ESP-01 ```.
+   • Pasang ``` ESP-01 ``` ke ``` CH340 USB to ESP-01 ```.
    
-   • Tekan dan tahan tombol yang ada di ``` USB CH340 ESP-01 ```, lalu tancapkan pada komputer/laptop.
+   • Tekan dan tahan tombol yang ada di ``` CH340 USB to ESP-01 ```, lalu tancapkan pada komputer/laptop.
    
    • Lepaskan tombol ketika perangkat sudah dikenali oleh komputer/laptop.
    
@@ -226,9 +226,9 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
 
 <table><tr><td width="840">
 
-   • Untuk mengunggah program, selain menggunakan ``` USB CH340 ESP-01 ```, anda juga dapat menggunakan alat pemrogram lainnya seperti: ``` FTDI FT232RL ``` atau ``` USB PL2303 ```.
+   • Untuk mengunggah program, selain menggunakan ``` CH340 USB to ESP-01 ```, anda juga dapat menggunakan alat pemrogram lainnya seperti: ``` FTDI FT232RL ``` atau ``` USB PL2303 ```.
 
-   • Berdasarkan pengalaman, saya akui bahwa penggunaan ``` USB CH340 ESP-01 ``` ini jauh lebih baik daripada ``` FTDI FT232RL ``` maupun ``` USB PL2303 ``` karena tidak membutuhkan kabel untuk dapat terhubung ke komputer/laptop.
+   • Berdasarkan pengalaman, saya akui bahwa penggunaan ``` CH340 USB to ESP-01 ``` ini jauh lebih baik daripada ``` FTDI FT232RL ``` maupun ``` USB PL2303 ``` karena tidak membutuhkan kabel untuk dapat terhubung ke komputer/laptop.
 
 </td></tr></table><br><br>
 
