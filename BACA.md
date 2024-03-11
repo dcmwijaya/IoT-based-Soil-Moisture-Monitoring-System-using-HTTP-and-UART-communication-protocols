@@ -287,7 +287,7 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
    
       • Silakan pilih sesuai dengan kebutuhan anda. Kalau di proyek ini, penulis menggunakan ``` Line chart ``` untuk visualisasi datanya.
    
-      • Silakan atur variabel yang ingin ditampilkan pada widget yaitu dengan cara klik ``` Add Variables ```, kemudian klik ``` ✅ Checklist ``` untuk menyimpan.
+      • Silakan atur variabel yang ingin ditampilkan pada widget yaitu dengan cara klik ``` + Add Variables ```, kemudian klik ``` ✅ Checklist ``` untuk menyimpan.
    
       • Jika ingin mengubah isi widget, silakan klik simbol ``` pensil ``` -> jika sudah, kemudian klik ``` ✅ Checklist ``` untuk menyimpan.
 
