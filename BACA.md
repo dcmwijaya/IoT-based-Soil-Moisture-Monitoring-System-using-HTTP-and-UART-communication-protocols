@@ -248,14 +248,12 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
 ## Sorotan
 <table>
 <tr>
-<th width="280">Perangkat Keras</th>
-<th width="280">Serial Monitor</th>
-<th width="280">Platform IoT: Ubidots</th>
+<th width="420">Perangkat Keras</th>
+<th width="420">Serial Monitor & Platform IoT: Ubidots</th>
 </tr>
 <tr>
 <td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/41a13e11-7acd-4943-abb9-d551a63073f8" alt="hardware"></td>
-<td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/51069926-f458-464b-a490-b0b35dab297c" alt="serial-monitor"></td>
-<td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/7b7f3925-fbb4-4044-997c-d934354120f5" alt="iot-platform"></td>
+<td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/998a5e4b-c96d-4a4e-863b-3f28d0f92023" alt="serialmonitor-iotplatform"></td>
 </tr>
 </table>
 
