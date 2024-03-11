@@ -303,7 +303,7 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
 
       <table><tr><td width="780">
    
-      ```
+      ```ino
       const String token = "BBUS-aRZvtYRMM7IWbrKFcICR30YYP7dh5Q"; // define ubidots token
       ```
 
