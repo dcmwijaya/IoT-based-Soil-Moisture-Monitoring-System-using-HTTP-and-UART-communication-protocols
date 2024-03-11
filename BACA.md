@@ -273,7 +273,7 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
 
       • ``` Default Device ``` -> pilih device yang ingin ditampilkan.
 
-      • Pengaturan yang lain biarkan saja -> kemudian klik ``` SAVE ``` untuk menyimpan.
+      • Pengaturan yang lain biarkan saja -> kemudian klik ``` SAVE ```.
 
    </td></tr></table><br>
 
