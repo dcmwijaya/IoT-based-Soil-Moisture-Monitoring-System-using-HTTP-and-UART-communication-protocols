@@ -249,9 +249,7 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
    
       • Setelah masuk ke dalam akun -> klik ``` Devices ```.
    
-      • Klik ``` + (Create a device) ```.
-   
-      • Klik ``` Blank Device ```.
+      • Klik ``` + (Create a device) ``` -> lalu pilih ``` Blank Device ```.
    
       • ``` Device name ``` sesuaikan dengan kebutuhan anda.
 
