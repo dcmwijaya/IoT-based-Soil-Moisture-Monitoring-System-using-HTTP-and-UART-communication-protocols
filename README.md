@@ -230,9 +230,7 @@ Internet of Things (IoT) is a concept where things connected to a network can pe
 
    • Based on experience, I admit that using the ``` USB CH340 ESP-01 ``` is much better than the ``` FTDI FT232RL ``` as well as ``` USB PL2303 ``` because it does not require a cable to be connected to a computer/laptop.
 
-</td></tr></table>
-
-<br><br>
+</td></tr></table><br><br>
 
 ## Get Started
 1. Download and extract this repository.<br><br>
@@ -248,7 +246,18 @@ Internet of Things (IoT) is a concept where things connected to a network can pe
 <br><br>
 
 ## Highlights
-<img src="" alt="soil-moisture">
+<table>
+<tr>
+<th width="280">Hardware</th>
+<th width="280">Serial Monitor</th>
+<th width="280">IoT Platform: Ubidots</th>
+</tr>
+<tr>
+<td><img src="" alt="hardware"></td>
+<td><img src="" alt="serial-monitor"></td>
+<td><img src="" alt="iot-platform"></td>
+</tr>
+</table>
 
 <br><br>
 
