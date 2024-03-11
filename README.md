@@ -203,7 +203,7 @@ Internet of Things (IoT) is a concept where things connected to a network can pe
 
 <br><br>
 
-## Programmer Tools Setup: CH340-ESP01 USB
+## CH340-ESP01 USB Setup
 1. ``` Programming Mode ``` :
       
    • Attach the ``` ESP-01 ``` to the ``` CH340-ESP01 USB ```.
@@ -226,9 +226,9 @@ Internet of Things (IoT) is a concept where things connected to a network can pe
 
 <table><tr><td width="840">
    
-   • To upload the program, besides using the ``` CH340-ESP01 USB ```, you can also use other programming tools such as: ``` FTDI FT232RL ``` or ``` PL2303 USB ```.
+   • To upload the program, besides using the ``` CH340-ESP01 USB ```, you can also use other programming tools such as: ``` FTDI USB ``` or ``` PL2303 USB ```.
 
-   • Based on experience, I admit that using the ``` CH340-ESP01 USB ``` is much better than the ``` FTDI FT232RL ``` as well as ``` PL2303 USB ``` because it does not require a cable to be connected to a computer/laptop.
+   • Based on experience, I admit that using the ``` CH340-ESP01 USB ``` is much better than the ``` FTDI USB ``` as well as ``` PL2303 USB ``` because it does not require a cable to be connected to a computer/laptop.
 
 </td></tr></table><br><br>
 
