@@ -14,7 +14,7 @@ ESP-01-based IoT systems generally use AT commands to be able to perform actions
 | --- | --- |
 | Development Board | • Arduino Uno R3<br>• ESP-01S |
 | Code Editor | Arduino IDE |
-| Programmer Tools | CH340 USB TO ESP-01 |
+| Programmer Tools | CH340-ESP01 USB |
 | Driver | USB-Serial CH340 |
 | IoT Platform | Ubidots |
 | Communications Protocol | • Hypertext Transfer Protocol (HTTP)<br>• Universal Asynchronous Receiver-Transmitter (UART) |
@@ -203,12 +203,12 @@ Internet of Things (IoT) is a concept where things connected to a network can pe
 
 <br><br>
 
-## Programmer Tools Setup: CH340 USB TO ESP-01
+## Programmer Tools Setup: CH340-ESP01 USB
 1. ``` Programming Mode ``` :
       
-   • Attach the ``` ESP-01 ``` to the ``` CH340 USB TO ESP-01 ```.
+   • Attach the ``` ESP-01 ``` to the ``` CH340-ESP01 USB ```.
 
-   • Press and hold the button on the ``` CH340 USB TO ESP-01 ```, and plug it into computer/laptop.
+   • Press and hold the button on the ``` CH340-ESP01 USB ```, and plug it into computer/laptop.
    
    • Release the button when the device is recognized by the computer/laptop.
    
@@ -216,7 +216,7 @@ Internet of Things (IoT) is a concept where things connected to a network can pe
    
 2. ``` Operating Mode ``` :
    
-   • Disconnect the ``` CH340 USB TO ESP-01 ``` from the computer/laptop.
+   • Disconnect the ``` CH340-ESP01 USB ``` from the computer/laptop.
 
    • Attach the ``` ESP-01 ``` to the ``` ESP-01 Adapter ```.
    
@@ -226,9 +226,9 @@ Internet of Things (IoT) is a concept where things connected to a network can pe
 
 <table><tr><td width="840">
    
-   • To upload the program, besides using the ``` CH340 USB TO ESP-01 ```, you can also use other programming tools such as: ``` FTDI FT232RL ``` or ``` USB PL2303 ```.
+   • To upload the program, besides using the ``` CH340-ESP01 USB ```, you can also use other programming tools such as: ``` FTDI FT232RL ``` or ``` USB PL2303 ```.
 
-   • Based on experience, I admit that using the ``` CH340 USB TO ESP-01 ``` is much better than the ``` FTDI FT232RL ``` as well as ``` USB PL2303 ``` because it does not require a cable to be connected to a computer/laptop.
+   • Based on experience, I admit that using the ``` CH340-ESP01 USB ``` is much better than the ``` FTDI FT232RL ``` as well as ``` USB PL2303 ``` because it does not require a cable to be connected to a computer/laptop.
 
 </td></tr></table><br><br>
 
