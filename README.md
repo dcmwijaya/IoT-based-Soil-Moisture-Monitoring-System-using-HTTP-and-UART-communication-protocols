@@ -303,7 +303,7 @@ Internet of Things (IoT) is a concept where things connected to a network can pe
 
       <table><tr><td width="780">
    
-      ```
+      ```ino
       const String token = "BBUS-aRZvtYRMM7IWbrKFcICR30YYP7dh5Q"; // define ubidots token
       ```
 
