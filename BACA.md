@@ -232,6 +232,87 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
 
 </td></tr></table><br><br>
 
+## Pengaturan Ubidots
+1. Memulai Ubidots : 
+
+   <table><tr><td width="810">
+   
+      • Silakan <a href="https://industrial.ubidots.com/accounts/signin/">Masuk</a> agar dapat mengakses layanan Ubidots.
+      
+      • Jika anda belum memiliki akun Ubidots silakan buat dulu.
+
+   </td></tr></table><br>
+
+2. Membuat devices : 
+
+   <table><tr><td width="810">
+   
+      • Setelah masuk ke dalam akun -> klik ``` Devices ```.
+   
+      • Klik ``` + (Create a device) ```.
+   
+      • Pilih ``` Blank Device ```.
+   
+      • Pada form ``` Device name ``` -> sesuaikan dengan kebutuhan anda.
+
+      • Pada form ``` Device label ``` -> sesuaikan dengan yang ada di Ubidots ketika berhasil melakukan POST data (berupa ID).
+
+   </td></tr></table><br>
+
+3. Membuat dashboards : 
+
+   <table><tr><td width="810">
+   
+      • Klik ``` Data ``` -> lalu pilih ``` Dashboards ```.
+   
+      • Klik ``` Add new Dashboard ```.
+   
+      • Name, Tags, Default time range -> sesuaikan dengan kebutuhan anda.
+
+      • Dynamic Dashboard -> ubah menjadi ``` Dynamic (Single Device) ```.
+
+      • Default Device -> pilih device yang ingin ditampilkan.
+
+      • Pengaturan lainnya biarkan saja -> kemudian pilih ``` SAVE ``` untuk menyimpan.
+
+   </td></tr></table><br>
+
+4. Membuat widget : 
+
+   <table><tr><td width="810">
+   
+      • Pastikan anda berada di menu ``` Dashboards ```.
+   
+      • Klik ``` + Add new widget ```.
+   
+      • Silakan pilih sesuai dengan kebutuhan anda. Kalau di proyek ini, penulis menggunakan ``` Line chart ``` untuk visualisasi datanya.
+   
+      • Silakan atur variabel yang ingin ditampilkan pada widget dengan cara klik ``` Add Variables ``` -> kemudian pilih ``` Save ``` untuk menyimpan.
+   
+      • Jika ingin mengubah isi widget, silakan klik simbol ``` pensil ``` -> kemudian jika sudah pilih ``` Save ``` untuk menyimpan.
+
+   </td></tr></table><br>
+
+5. Konfigurasi firmware : 
+
+   <table><tr><td width="810">
+   
+      • Klik bagian kanan pojok atas bagian ``` User ``` -> lalu pilih bagian ``` API Credentials ```.
+   
+      • Salin ``` Default token ``` yang ada pada bagian ``` Tokens ``` -> lalu tempelkan pada kode firmware. Contohnya :
+
+      <table><tr><td width="780">
+   
+      ```
+      const String token = "BBUS-aRZvtYRMM7IWbrKFcICR30YYP7dh5Q"; // define ubidots token
+      ```
+
+      </td></tr></table>
+
+   </td></tr></table>
+
+<br><br>
+
 ## Memulai
 1. Unduh dan ekstrak repositori ini.<br><br>
 
