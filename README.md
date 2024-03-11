@@ -232,6 +232,87 @@ Internet of Things (IoT) is a concept where things connected to a network can pe
 
 </td></tr></table><br><br>
 
+## Ubidots Setup
+1. Getting started with Ubidots :
+
+   <table><tr><td width="810">
+   
+      • Please <a href="https://industrial.ubidots.com/accounts/signin/">Log in</a> to access the ``` Ubidots ``` service.
+      
+      • If you don't have a ``` Ubidots ``` account yet, please create one.
+
+   </td></tr></table><br>
+
+2. Creating devices : 
+
+   <table><tr><td width="810">
+   
+      • After logging into the account -> click ``` Devices ```.
+   
+      • Click ``` + (Create a device) ``` -> then select ``` Blank Device ```.
+   
+      • ``` Device name ``` customize according to your needs.
+
+      • ``` Device label ``` customize what was on Ubidots when it successfully sent the data the first time, in which case it will usually be an ID.
+
+      • Select ``` ✅ Checklist ``` to save.
+
+   </td></tr></table><br>
+
+3. Creating dashboards : 
+
+   <table><tr><td width="810">
+   
+      • Click ``` Data ``` -> then select ``` Dashboards ```.
+   
+      • Click ``` Add new Dashboard ```.
+   
+      • ``` Name ```, ``` Tags ```, ``` Default time range ``` -> customize it to your needs.
+
+      • ``` Dynamic Dashboard ``` -> change it to ``` Dynamic (Single Device) ```.
+
+      • ``` Default Device ``` -> select the device you want to display.
+
+      • Leave the other settings alone -> then click ``` SAVE ```.
+
+   </td></tr></table><br>
+
+4. Creating widget : 
+
+   <table><tr><td width="810">
+   
+      • Make sure you are in the ``` Dashboards ``` menu.
+   
+      • Click ``` + Add new widget ```.
+   
+      • Please choose according to your needs. In this project, the author uses ``` Line chart ``` for data visualization.
+   
+      • Please set the variables that you want to display on the widget by clicking ``` + Add Variables ```, then click ``` ✅ Checklist ``` to save.
+   
+      • If you want to change the content of the widget, please click the ``` pencil ``` symbol -> if so, then click ``` ✅ Checklist ``` to save.
+
+   </td></tr></table><br>
+
+5. Firmware configuration : 
+
+   <table><tr><td width="810">
+   
+      • Click the ``` User ``` section in the top right corner -> then select ``` API Credentials ```.
+   
+      • Copy the ``` Default token ``` -> paste it into the firmware code. An example is as follows:
+
+      <table><tr><td width="780">
+   
+      ```
+      const String token = "BBUS-aRZvtYRMM7IWbrKFcICR30YYP7dh5Q"; // define ubidots token
+      ```
+
+      </td></tr></table>
+
+   </td></tr></table>
+
+<br><br>
+
 ## Get Started
 1. Download and extract this repository.<br><br>
    
