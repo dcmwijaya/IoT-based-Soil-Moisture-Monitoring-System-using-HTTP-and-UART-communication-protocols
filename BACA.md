@@ -253,7 +253,7 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
    
       • ``` Device name ``` sesuaikan dengan kebutuhan anda.
 
-      • ``` Device label ``` sesuaikan dengan apa yang ada di Ubidots sewaktu berhasil melakukan pengiriman data pertama kali (biasanya ID Device).
+      • ``` Device label ``` sesuaikan dengan apa yang ada di Ubidots sewaktu berhasil melakukan pengiriman data pertama kali, biasanya berbentuk ID.
 
    </td></tr></table><br>
 
