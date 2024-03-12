@@ -204,6 +204,8 @@ Internet of Things (IoT) is a concept where things connected to a network can pe
 <br><br>
 
 ## CH340-ESP01 USB Setup
+<img width="840" src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/63c12ea2-d05d-4b60-b6ba-813597fe80af" alt="pinout"><br><br><br>
+
 1. ``` Programming Mode ``` :
       
    • Attach the ``` ESP-01 ``` to the ``` CH340-ESP01 USB ```.
