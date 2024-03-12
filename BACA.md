@@ -5,14 +5,14 @@
 
 # IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols
 <strong>Proyek Tunggal: Sistem Pemantauan Kelembaban Tanah berbasis IoT menggunakan protokol komunikasi HTTP dan UART</strong><br><br>
-Sistem IoT berbasis ESP-01 umumnya menggunakan perintah AT untuk dapat melakukan tindakan dalam suatu jaringan. Perintah AT ini diketahui ada banyak. Selain itu, kombinasi perintah yang ada sulit untuk dimengerti bagi seorang pemula. Oleh karena itu, proyek ini dibuat untuk meningkatkan kenyamanan pada sistem IoT berbasis ESP-01. Dalam hal ini, penulis menggunakan protokol UART di sisi papan pengembangan. Proyek ini telah dilaksanakan dan memakan waktu kurang lebih 2 minggu. Ada 2 jenis papan pengembangan yang dipakai. Arduino Uno R3 dipakai untuk mengambil data kelembaban tanah dari sensor yang kemudian dikirim ke ESP-01S melalui komunikasi UART: Software Serial. Sementara itu, ESP-01S digunakan untuk menerima data dari Arduino Uno melalui komunikasi UART: Hardware Serial dan kemudian mengirim data ke Ubidots melalui protokol HTTP.
+Sistem IoT berbasis ESP-01 umumnya menggunakan perintah AT untuk dapat melakukan tindakan dalam suatu jaringan. Perintah AT ini diketahui ada banyak. Selain itu, kombinasi perintah yang ada sulit untuk dimengerti bagi seorang pemula. Oleh karena itu, proyek ini dibuat untuk meningkatkan kenyamanan pada sistem IoT berbasis ESP-01. Dalam hal ini, penulis menggunakan protokol UART di sisi papan pengembangan. Proyek ini telah dilaksanakan dan memakan waktu kurang lebih 2 minggu. Ada 2 jenis papan pengembangan yang dipakai. Arduino Uno R3 dipakai untuk mengambil data kelembaban tanah dari sensor yang kemudian dikirim ke ESP-01 melalui komunikasi UART: Software Serial. Sementara itu, ESP-01 digunakan untuk menerima data dari Arduino Uno melalui komunikasi UART: Hardware Serial dan kemudian mengirim data ke Ubidots melalui protokol HTTP.
 
 <br><br>
 
 ## Kebutuhan Proyek
 | Bagian | Deskripsi |
 | --- | --- |
-| Papan Pengembangan | • Arduino Uno R3<br>• ESP-01S |
+| Papan Pengembangan | • Arduino Uno R3<br>• ESP-01 |
 | Editor Kode | Arduino IDE |
 | Alat Pemrogram | USB CH340-ESP01 |
 | Driver | USB-Serial CH340 |
@@ -131,7 +131,7 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
          
       </th><th width="775">
 
-      Cara mengatur board ``` ESP-01S ```
+      Cara mengatur board ``` ESP-01 ```
             
       </th></tr>
       <tr><td colspan="2">
@@ -167,7 +167,7 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
          
       </th><th width="775">
 
-      Cara mengubah kecepatan board ``` ESP-01S ```
+      Cara mengubah kecepatan board ``` ESP-01 ```
             
       </th></tr>
       <tr><td colspan="2">
