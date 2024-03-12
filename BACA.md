@@ -226,7 +226,7 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
 
 <table><tr><td width="840">
 
-   • Untuk mengunggah program, selain menggunakan ``` USB CH340-ESP01 ```, anda juga dapat menggunakan alat pemrogram lainnya seperti: ``` USB CP2102 ```, ``` USB CH340 ```, ``` USB FTDI ```, atau ``` USB PL2303 ```.
+   • Untuk mengunggah program, selain menggunakan ``` USB CH340-ESP01 ```, anda juga dapat menggunakan alat pemrogram lainnya seperti: ``` USB CP2102 ```, ``` USB CH340 ```, ``` USB FTDI ```, atau dengan ``` USB PL2303 ```.
 
    • Berdasarkan pengalaman, saya akui bahwa penggunaan ``` USB CH340-ESP01 ``` ini jauh lebih baik daripada alat pemrogram lainnya karena tidak membutuhkan kabel untuk dapat terhubung ke komputer/laptop.
 
