@@ -226,7 +226,7 @@ Internet of Things (IoT) is a concept where things connected to a network can pe
 
 <table><tr><td width="840">
    
-   • To upload the program, besides using the ``` CH340-ESP01 USB ```, you can also use other programming tools such as: ``` CP2102 USB ```, ``` CH340 USB ```, ``` FTDI USB ```, or ``` PL2303 USB ```.
+   • To upload the program, besides using the ``` CH340-ESP01 USB ```, you can also use other programming tools such as: ``` CP2102 USB ```, ``` CH340 USB ```, ``` FTDI USB ```, or with ``` PL2303 USB ```.
 
    • Based on experience, I admit that using the ``` CH340-ESP01 USB ``` is much better than other programming tools because it does not require a cable to be connected to a computer/laptop.
 
