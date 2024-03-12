@@ -220,7 +220,7 @@ Internet of Things (IoT) is a concept where things connected to a network can pe
    
    • Disconnect the ``` CH340-ESP01 USB ``` from the computer/laptop.
 
-   • Attach the ``` ESP-01 ``` to the ``` ESP-01 Adapter ```.
+   • Attach the ``` ESP-01 ``` to the ``` ESP-01 Adapter ```. Do the wiring as shown in the pictorial diagram.
    
    • The program code that has been embedded in this ``` ESP-01 board ``` is ready for operation (no more programming activities).<br><br><br>
 
