@@ -204,6 +204,8 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
 <br><br>
 
 ## Pengaturan USB CH340-ESP01
+<img width="840" src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/63c12ea2-d05d-4b60-b6ba-813597fe80af" alt="pinout"><br><br><br>
+
 1. ``` Mode Pemrograman ``` :
 
    • Pasang ``` ESP-01 ``` ke ``` USB CH340-ESP01 ```.
