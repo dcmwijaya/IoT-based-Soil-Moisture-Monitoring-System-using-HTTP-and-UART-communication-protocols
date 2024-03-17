@@ -80,7 +80,7 @@ Basically, a device can be communicated with other devices either wirelessly or 
 
 • <strong>Internet of Things</strong>
 
-Internet of Things (IoT) is a concept where things connected to a network can perform one or more actions in achieving a goal. These actions include data collection, data transmission, data reception, or data processing. Every IoT project requires devices that can connect to WiFi such as ESP. ESP consists of 2 types, namely ESP8266 and ESP32. This is on the market very diverse models, for that you need to readjust to the needs in the project so as not to cause disappointment.
+``` Internet of Things (IoT) ``` is a concept where things connected to a network can perform one or more actions in achieving a goal. These actions include data collection, data transmission, data reception, or data processing. Every IoT project requires devices that can connect to WiFi such as ESP. ESP consists of 2 types, namely ``` ESP8266 ``` and ``` ESP32 ```. This is on the market very diverse models, for that you need to readjust to the needs in the project so as not to cause disappointment.
 
 <br><br>
 
