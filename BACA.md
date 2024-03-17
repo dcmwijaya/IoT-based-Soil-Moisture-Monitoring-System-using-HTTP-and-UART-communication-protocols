@@ -220,9 +220,9 @@ Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke
    
    • Lepaskan ``` USB CH340-ESP01 ``` dari komputer/laptop.
    
-   • Pasang ``` ESP-01 ``` ke ``` Adapter ESP-01 ```. Lakukan pemasangan kabel seperti yang ditunjukkan dalam diagram ilustrasi.
+   • Kode program yang telah tertanam dalam ``` board ESP-01 ``` ini siap untuk dioperasikan (sudah tidak ada aktivitas pemrograman lagi).
    
-   • Kode program yang telah tertanam dalam ``` board ESP-01 ``` ini siap untuk dioperasikan (sudah tidak ada aktivitas pemrograman lagi).<br><br><br>
+   • Lepaskan ``` ESP-01 ``` dari ``` USB CH340-ESP01 ```. Lakukan pemasangan kabel seperti yang ditunjukkan dalam diagram ilustrasi.<br><br><br>
 
 <strong>Catatan :</strong>
 
