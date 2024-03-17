@@ -80,7 +80,7 @@ Pada dasarnya, suatu perangkat itu dapat dikomunikasikan dengan perangkat lain b
 
 • <strong>Internet of Things</strong>
 
-Internet of Things (IoT) adalah sebuah konsep dimana suatu hal yang terhubung ke jaringan dapat melakukan satu tindakan atau lebih dalam mencapai suatu tujuan. Tindakan ini diantaranya berupa pengumpulan data, pengiriman data, penerimaan data, atau pengolahan data. Setiap proyek IoT pasti membutuhkan perangkat yang dapat terhubung ke WiFi seperti ESP. ESP terdiri dari 2 jenis, yaitu ESP8266 dan ESP32. Hal ini di pasaran sangat beragam sekali modelnya, untuk itu perlu sekali anda menyesuaikan kembali dengan kebutuhan yang ada di proyek agar tidak menimbulkan kekecewaan.
+``` Internet of Things (IoT) ``` adalah sebuah konsep dimana suatu hal yang terhubung ke jaringan dapat melakukan satu tindakan atau lebih dalam mencapai suatu tujuan. Tindakan ini diantaranya berupa pengumpulan data, pengiriman data, penerimaan data, atau pengolahan data. Setiap proyek IoT pasti membutuhkan perangkat yang dapat terhubung ke WiFi seperti ESP. ESP terdiri dari 2 jenis, yaitu ``` ESP8266 ``` dan ``` ESP32 ```. Hal ini di pasaran sangat beragam sekali modelnya, untuk itu perlu sekali anda menyesuaikan kembali dengan kebutuhan yang ada di proyek agar tidak menimbulkan kekecewaan.
 
 <br><br>
 
