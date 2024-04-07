@@ -15,7 +15,7 @@ ESP-01-based IoT systems generally use AT commands to be able to perform actions
 | Development Board | • Arduino Uno R3<br>• ESP-01 |
 | Code Editor | Arduino IDE |
 | Programmer Tools | CH340-ESP01 USB |
-| Driver | USB-Serial CH340 |
+| Driver | CH340 USB Driver |
 | IoT Platform | Ubidots |
 | Communications Protocol | • Hypertext Transfer Protocol (HTTP)<br>• Universal Asynchronous Receiver-Transmitter (UART) |
 | IoT Architecture | 3 Layer |
@@ -32,17 +32,17 @@ ESP-01-based IoT systems generally use AT commands to be able to perform actions
    <table><tr><td width="810">
          
    ```
-   https://www.arduino.cc/en/software
+   https://bit.ly/ArduinoIDE_Installer
    ```
 
    </td></tr></table><br>
    
-2. USB-Serial CH340
+2. CH340 USB Driver
 
    <table><tr><td width="810">
    
    ```
-   https://bit.ly/CH340_Driver
+   https://bit.ly/CH340_USB_Driver
    ```
    
    </td></tr></table>
