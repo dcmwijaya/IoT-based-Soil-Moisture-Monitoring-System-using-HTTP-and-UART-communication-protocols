@@ -15,7 +15,7 @@ Sistem IoT berbasis ESP-01 umumnya menggunakan perintah AT untuk dapat melakukan
 | Papan Pengembangan | • Arduino Uno R3<br>• ESP-01 |
 | Editor Kode | Arduino IDE |
 | Alat Pemrogram | USB CH340-ESP01 |
-| Driver | USB-Serial CH340 |
+| Driver | CH340 USB Driver |
 | Platform IoT | Ubidots |
 | Protokol Komunikasi | • Hypertext Transfer Protocol (HTTP)<br>• Universal Asynchronous Receiver-Transmitter (UART) |
 | Arsitektur IoT | 3 Lapisan |
@@ -32,17 +32,17 @@ Sistem IoT berbasis ESP-01 umumnya menggunakan perintah AT untuk dapat melakukan
    <table><tr><td width="810">
          
    ```
-   https://www.arduino.cc/en/software
+   https://bit.ly/ArduinoIDE_Installer
    ```
 
    </td></tr></table><br>
    
-2. USB-Serial CH340
+2. CH340 USB Driver
 
    <table><tr><td width="810">
    
    ```
-   https://bit.ly/CH340_Driver
+   https://bit.ly/CH340_USB_Driver
    ```
    
    </td></tr></table>
