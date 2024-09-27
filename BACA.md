@@ -1,6 +1,6 @@
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?style=flat)](https://github.com/ellerbrock/open-source-badges/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?logo=github&color=%23F7DF1E)](https://opensource.org/licenses/MIT)
-![GitHub last commit](https://img.shields.io/github/last-commit/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols)
+![GitHub last commit](https://img.shields.io/github/last-commit/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols?logo=Codeforces&logoColor=white&color=%23F7DF1E)
 ![Project](https://img.shields.io/badge/Project-Internet%20of%20Things-light.svg?style=flat&logo=arduino&logoColor=white&color=%23F7DF1E)
 
 # IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols
@@ -56,8 +56,8 @@ Sistem IoT berbasis ESP-01 umumnya menggunakan perintah AT untuk dapat melakukan
 <th width="420">Infrastruktur</th>
 </tr>
 <tr>
-<td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/9f8777a6-d93a-4113-b565-14a660b88189" alt="Block-Diagram"></td>
-<td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/6327e020-3576-42ce-a801-83a1ed5ca29b" alt="Infrastructure"></td>
+<td><img src="Assets/Documentation/Diagram/Block Diagram.jpg" alt="block-diagram"></td>
+<td><img src="Assets/Documentation/Diagram/Infrastructure.jpg" alt="infrastructure"></td>
 </tr>
 </table>
 <table>
@@ -66,8 +66,8 @@ Sistem IoT berbasis ESP-01 umumnya menggunakan perintah AT untuk dapat melakukan
 <th width="420">Pengkabelan</th>
 </tr>
 <tr>
-<td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/15058456-ef5e-404b-a229-d0f642060bd6" alt="Pictorial-Diagram"></td>
-<td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/2ec91826-9f04-4548-9ac5-9db08d28738d" alt="Wiring"></td>
+<td><img src="Assets/Documentation/Diagram/Pictorial Diagram.jpg" alt="pictorial-diagram"></td>
+<td><img src="Assets/Documentation/Table/Device Wiring.jpg" alt="wiring"></td>
 </tr>
 </table>
 
@@ -204,7 +204,7 @@ Pada dasarnya, suatu perangkat itu dapat dikomunikasikan dengan perangkat lain b
 <br><br>
 
 ## Pengaturan USB CH340-ESP01
-<img width="840" src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/63c12ea2-d05d-4b60-b6ba-813597fe80af" alt="pinout"><br><br><br>
+<img width="840" src="Assets/Documentation/Setup/ESP01.jpg" alt="esp01-setup"><br><br><br>
 
 1. ``` Mode Pemrograman ``` :
 
@@ -335,8 +335,8 @@ Pada dasarnya, suatu perangkat itu dapat dikomunikasikan dengan perangkat lain b
 <th width="420">Serial Monitor & Platform IoT: Ubidots</th>
 </tr>
 <tr>
-<td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/41a13e11-7acd-4943-abb9-d551a63073f8" alt="hardware"></td>
-<td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/998a5e4b-c96d-4a4e-863b-3f28d0f92023" alt="serialmonitor-iotplatform"></td>
+<td><img src="Assets/Documentation/Experiment/Device.jpg" alt="hardware"></td>
+<td><img src="Assets/Documentation/Experiment/Serial Monitor Ubidots.jpg" alt="serialmonitor-iotplatform"></td>
 </tr>
 </table>
 
@@ -348,7 +348,7 @@ Jika karya ini bermanfaat bagi anda, maka dukunglah karya ini sebagai bentuk apr
 <br><br>
 
 ## Penafian
-Aplikasi ini dibuat dengan menyertakan sumber-sumber dari pihak ketiga. Pihak ketiga di sini adalah penyedia layanan, yang layanannya berupa pustaka, kerangka kerja, dan lain-lain. Saya ucapkan terima kasih banyak atas layanannya. Telah terbukti sangat membantu dan dapat diimplementasikan.
+Aplikasi ini merupakan hasil karya saya sendiri dan bukan merupakan hasil plagiat dari penelitian atau karya orang lain, kecuali yang berkaitan dengan layanan pihak ketiga yang meliputi: kode editor, library, framework, dan lain sebagainya.
 
 <br><br>
 

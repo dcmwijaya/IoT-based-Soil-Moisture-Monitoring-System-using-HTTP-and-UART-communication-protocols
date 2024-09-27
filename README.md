@@ -1,6 +1,6 @@
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?style=flat)](https://github.com/ellerbrock/open-source-badges/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?logo=github&color=%23F7DF1E)](https://opensource.org/licenses/MIT)
-![GitHub last commit](https://img.shields.io/github/last-commit/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols)
+![GitHub last commit](https://img.shields.io/github/last-commit/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols?logo=Codeforces&logoColor=white&color=%23F7DF1E)
 ![Project](https://img.shields.io/badge/Project-Internet%20of%20Things-light.svg?style=flat&logo=arduino&logoColor=white&color=%23F7DF1E)
 
 # IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols
@@ -56,8 +56,8 @@ ESP-01-based IoT systems generally use AT commands to be able to perform actions
 <th width="420">Infrastructure</th>
 </tr>
 <tr>
-<td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/9f8777a6-d93a-4113-b565-14a660b88189" alt="Block-Diagram"></td>
-<td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/6327e020-3576-42ce-a801-83a1ed5ca29b" alt="Infrastructure"></td>
+<td><img src="Assets/Documentation/Diagram/Block Diagram.jpg" alt="block-diagram"></td>
+<td><img src="Assets/Documentation/Diagram/Infrastructure.jpg" alt="infrastructure"></td>
 </tr>
 </table>
 <table>
@@ -66,8 +66,8 @@ ESP-01-based IoT systems generally use AT commands to be able to perform actions
 <th width="420">Wiring</th>
 </tr>
 <tr>
-<td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/15058456-ef5e-404b-a229-d0f642060bd6" alt="Pictorial-Diagram"></td>
-<td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/2ec91826-9f04-4548-9ac5-9db08d28738d" alt="Wiring"></td>
+<td><img src="Assets/Documentation/Diagram/Pictorial Diagram.jpg" alt="pictorial-diagram"></td>
+<td><img src="Assets/Documentation/Table/Device Wiring.jpg" alt="wiring"></td>
 </tr>
 </table>
 
@@ -204,7 +204,7 @@ Basically, a device can be communicated with other devices either wirelessly or 
 <br><br>
 
 ## CH340-ESP01 USB Setup
-<img width="840" src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/63c12ea2-d05d-4b60-b6ba-813597fe80af" alt="pinout"><br><br><br>
+<img width="840" src="Assets/Documentation/Setup/ESP01.jpg" alt="esp01-setup"><br><br><br>
 
 1. ``` Programming Mode ``` :
       
@@ -335,8 +335,8 @@ Basically, a device can be communicated with other devices either wirelessly or 
 <th width="420">Serial Monitor & IoT Platform: Ubidots</th>
 </tr>
 <tr>
-<td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/41a13e11-7acd-4943-abb9-d551a63073f8" alt="hardware"></td>
-<td><img src="https://github.com/devancakra/IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols/assets/54527592/998a5e4b-c96d-4a4e-863b-3f28d0f92023" alt="serialmonitor-iotplatform"></td>
+<td><img src="Assets/Documentation/Experiment/Device.jpg" alt="hardware"></td>
+<td><img src="Assets/Documentation/Experiment/Serial Monitor Ubidots.jpg" alt="serialmonitor-iotplatform"></td>
 </tr>
 </table>
 
@@ -348,7 +348,7 @@ If this work is useful to you, then support this work as a form of appreciation 
 <br><br>
 
 ## Disclaimer
-This application has been created by including third-party sources. Third parties here are service providers, whose services are in the form of libraries, frameworks, and others. I thank you very much for the service. It has proven to be very helpful and implementable.
+This application is my own work and is not the result of plagiarism from other people's research or work, except those related to third party services which include: editor code, libraries, frameworks, and so on.
 
 <br><br>
 
