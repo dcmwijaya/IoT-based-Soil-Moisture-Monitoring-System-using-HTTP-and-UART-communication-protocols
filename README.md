@@ -6,7 +6,6 @@
 ![Type](https://img.shields.io/badge/Type-Personal%20Experiment-light.svg?style=flat&logo=gitbook&logoColor=white&color=%23F7DF1E)
 
 # IoT-based-Soil-Moisture-Monitoring-System-using-HTTP-and-UART-communication-protocols
-<strong>Solo Project: IoT-based Soil Moisture Monitoring System using HTTP and UART communication protocols</strong><br><br>
 ESP-01-based IoT systems generally use AT commands to be able to perform actions in a network. These AT commands are known to be many. In addition, the combination of commands is difficult to understand for a beginner. Therefore, this project was created to improve the convenience of the ESP-01-based IoT system. In this case, the author used the UART protocol on the development board side. This project has been implemented and took approximately 2 weeks. Two types of development boards were used. Arduino Uno R3 is used to retrieve soil moisture data from the sensor which is then sent to ESP-01 via UART communication: Serial Software. Meanwhile, ESP-01 is used to receive data from Arduino Uno via UART communication: Hardware Serial and then send the data to Ubidots via HTTP protocol.
 
 <br><br>
