@@ -202,7 +202,7 @@ Basically, a device can be communicated with other devices either wirelessly or 
 
 7. Change the ``` WiFi Name ```, ``` WiFi Password ```, and so on according to what you are currently using.<br><br>
 
-8. Before uploading the program please click: ``` Verify ```.<br><br>
+8. Before uploading the program, please click: ``` Verify ```.<br><br>
 
 9. If there is no error in the program code, the next step is to use the ``` ESP-01 ``` programming tool according to the procedure. Then click: ``` Upload ```. While ``` Arduino Uno ``` can be done directly without using programming tools.<br><br>
 
